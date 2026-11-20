@@ -1,0 +1,16 @@
+{
+  "case_id": "BHOOMI-CLEAN-002",
+  "abstained": true,
+  "message": "Insufficient verified comparable evidence to produce a reliable valuation.",
+  "verified_count": 0,
+  "total_count": 0,
+  "subject_extent_acres": 2.0,
+  "subject_extent_source": "RTC_Mandya_112_3_2024.pdf (2-00 (2 Acres 0 Guntas))",
+  "min_price_per_acre_inr": null,
+  "median_price_per_acre_inr": null,
+  "max_price_per_acre_inr": null,
+  "estimated_range_inr": null,
+  "method": "Comparable-based arithmetic range (Abstained: < 3 verified comparables)",
+  "limitations": "Comparable-based arithmetic baseline only. NOT a registered valuer report, bank appraisal, or official Sub-Registrar guidance valuation.",
+  "comparables": []
+}

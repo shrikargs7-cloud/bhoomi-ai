@@ -1,0 +1,26 @@
+[
+  {
+    "case_id": "BHOOMI-DEMO-001",
+    "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+    "village": "Ramanagara Rural",
+    "district": "Ramanagara",
+    "survey_number": "84/1",
+    "documents_count": 5,
+    "discrepancies_count": 4,
+    "synthetic": true,
+    "status": "ready_for_review",
+    "created_at": "2026-11-20 13:54:39 UTC"
+  },
+  {
+    "case_id": "BHOOMI-CLEAN-002",
+    "case_name": "Mandya Survey 112/3 Clean Title Verification",
+    "village": "Chikkarasinakere",
+    "district": "Mandya",
+    "survey_number": "112/3",
+    "documents_count": 3,
+    "discrepancies_count": 0,
+    "synthetic": true,
+    "status": "reviewed_clean",
+    "created_at": "2026-11-20 13:54:39 UTC"
+  }
+]

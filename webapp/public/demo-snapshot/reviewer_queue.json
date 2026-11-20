@@ -1,0 +1,63 @@
+{
+  "pending_discrepancies": [
+    {
+      "case_id": "BHOOMI-DEMO-001",
+      "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+      "survey_number": "84/1",
+      "discrepancy_id": "BHOOMI-DEMO-001-DISC-R1-01",
+      "rule_id": "R1",
+      "rule_name": "Deceased Owner in Current Record",
+      "severity": "Requires professional review",
+      "explanation": "'Ramachandrappa' (date of death 14/03/2016) still appears as a recorded owner ('Ramachandrappa') in RTC_Form16_2023.pdf dated 12/04/2023 (name similarity 100%). This may indicate pending succession mutation or an unupdated revenue khata and requires verification.",
+      "suggested_next_step": "Verify legal heirship tree (Vamsha Vruksha) and submit Death Certificate at Nadakacheri / Bhoomi portal for Pauti Khata (inheritance mutation) verification.",
+      "evidence_count": 2
+    },
+    {
+      "case_id": "BHOOMI-DEMO-001",
+      "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+      "survey_number": "84/1",
+      "discrepancy_id": "BHOOMI-DEMO-001-DISC-R2-02",
+      "rule_id": "R2",
+      "rule_name": "Extent Mismatch Between Documents",
+      "severity": "High",
+      "explanation": "For Survey No. 84/1, stated extents differ across documents (RTC_Form16_2023.pdf: 1-35 (1 acres 35 guntas) (1.875 ac); Partition_Deed_2011_Registered.pdf: 2-15 (2 acres 15 guntas) (2.375 ac); Survey_Sketch_Tippani_84_1.pdf: 1-35 (1 acres 35 guntas) (1.875 ac)), a variance of 0.5 acres. Legitimate causes such as pot kharab deduction, phodi subdivision, or resurvey correction may account for part of this variance; this requires verification.",
+      "suggested_next_step": "Reconcile deed schedules against Akarband / Hissa Tippani and request an 11E / Tatkal Phodi measurement through a licensed surveyor.",
+      "evidence_count": 3
+    },
+    {
+      "case_id": "BHOOMI-DEMO-001",
+      "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+      "survey_number": "84/1",
+      "discrepancy_id": "BHOOMI-DEMO-001-DISC-R3-03",
+      "rule_id": "R3",
+      "rule_name": "Missing Inheritance Mutation (Pauti Khata)",
+      "severity": "Medium",
+      "explanation": "Death Certificate Death_Certificate_Ramachandrappa.pdf establishes demise on 14/03/2016, and no certified inheritance mutation (Pauti Khata) appears in the uploaded mutation extracts to reflect succession in revenue records. This requires verification before title transfer.",
+      "suggested_next_step": "Apply for Pauti Khata mutation at Nadakacheri / Taluk office with death certificate, family genealogy certificate, and survivor consent.",
+      "evidence_count": 3
+    },
+    {
+      "case_id": "BHOOMI-DEMO-001",
+      "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+      "survey_number": "84/1",
+      "discrepancy_id": "BHOOMI-DEMO-001-DISC-R5-04",
+      "rule_id": "R5",
+      "rule_name": "Missing Expected Supporting Document",
+      "severity": "Medium",
+      "explanation": "RTC Column 11 in RTC_Form16_2023.pdf states: 'Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).', but no registered mortgage deed, loan closure letter, or bank NOC has been provided; encumbrance status requires verification.",
+      "suggested_next_step": "Obtain Form 15/16 Encumbrance Certificate (EC) from Kaveri Online and request a Bank NOC / Discharge Deed if the loan has been repaid.",
+      "evidence_count": 1
+    }
+  ],
+  "low_confidence_fields": [],
+  "uncertain_persons": [],
+  "reupload_documents": [],
+  "summary": {
+    "total_pending_items": 4,
+    "pending_discrepancies_count": 4,
+    "low_confidence_fields_count": 0,
+    "uncertain_persons_count": 0,
+    "reupload_documents_count": 0,
+    "cases_requiring_attention": 1
+  }
+}

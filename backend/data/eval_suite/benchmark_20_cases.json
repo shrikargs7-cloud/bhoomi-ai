@@ -1,0 +1,418 @@
+[
+  {
+    "case_id": "SYNTH-01-CLEAN",
+    "expected_rules": [],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-01-CLEAN/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-01-CLEAN/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-01-CLEAN/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-02-CLEAN",
+    "expected_rules": [],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-02-CLEAN/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-02-CLEAN/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-02-CLEAN/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-03-CLEAN",
+    "expected_rules": [],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-03-CLEAN/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-03-CLEAN/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-03-CLEAN/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-04-CLEAN",
+    "expected_rules": [],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-04-CLEAN/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-04-CLEAN/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-04-CLEAN/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-05-DECEASED",
+    "expected_rules": [
+      "R1",
+      "R3"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-05-DECEASED/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Death_Certificate.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-05-DECEASED/Death_Certificate.pdf",
+        "type": "DEATH_CERTIFICATE"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-06-DECEASED",
+    "expected_rules": [
+      "R1",
+      "R3"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-06-DECEASED/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Death_Certificate.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-06-DECEASED/Death_Certificate.pdf",
+        "type": "DEATH_CERTIFICATE"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-07-DECEASED",
+    "expected_rules": [
+      "R1",
+      "R3"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-07-DECEASED/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Death_Certificate.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-07-DECEASED/Death_Certificate.pdf",
+        "type": "DEATH_CERTIFICATE"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-08-DECEASED",
+    "expected_rules": [
+      "R1",
+      "R3"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-08-DECEASED/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Death_Certificate.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-08-DECEASED/Death_Certificate.pdf",
+        "type": "DEATH_CERTIFICATE"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-09-EXTENT",
+    "expected_rules": [
+      "R2"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-09-EXTENT/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-09-EXTENT/Deed.pdf",
+        "type": "PARTITION_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-09-EXTENT/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-10-EXTENT",
+    "expected_rules": [
+      "R2"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-10-EXTENT/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-10-EXTENT/Deed.pdf",
+        "type": "PARTITION_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-10-EXTENT/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-11-EXTENT",
+    "expected_rules": [
+      "R2"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-11-EXTENT/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-11-EXTENT/Deed.pdf",
+        "type": "PARTITION_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-11-EXTENT/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-12-EXTENT",
+    "expected_rules": [
+      "R2"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-12-EXTENT/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-12-EXTENT/Deed.pdf",
+        "type": "PARTITION_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-12-EXTENT/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-13-SURVEY",
+    "expected_rules": [
+      "R4"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-13-SURVEY/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-13-SURVEY/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-13-SURVEY/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-14-SURVEY",
+    "expected_rules": [
+      "R4"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-14-SURVEY/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-14-SURVEY/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-14-SURVEY/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-15-SURVEY",
+    "expected_rules": [
+      "R4"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-15-SURVEY/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-15-SURVEY/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-15-SURVEY/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-16-SURVEY",
+    "expected_rules": [
+      "R4"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-16-SURVEY/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Deed.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-16-SURVEY/Deed.pdf",
+        "type": "SALE_DEED"
+      },
+      {
+        "filename": "Mutation.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-16-SURVEY/Mutation.pdf",
+        "type": "MUTATION_EXTRACT"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-17-MORTGAGE",
+    "expected_rules": [
+      "R5"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-17-MORTGAGE/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Sketch.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-17-MORTGAGE/Sketch.pdf",
+        "type": "SURVEY_SKETCH"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-18-MORTGAGE",
+    "expected_rules": [
+      "R5"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-18-MORTGAGE/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Sketch.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-18-MORTGAGE/Sketch.pdf",
+        "type": "SURVEY_SKETCH"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-19-MORTGAGE",
+    "expected_rules": [
+      "R5"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-19-MORTGAGE/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Sketch.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-19-MORTGAGE/Sketch.pdf",
+        "type": "SURVEY_SKETCH"
+      }
+    ]
+  },
+  {
+    "case_id": "SYNTH-20-MORTGAGE",
+    "expected_rules": [
+      "R5"
+    ],
+    "files": [
+      {
+        "filename": "RTC.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-20-MORTGAGE/RTC.pdf",
+        "type": "RTC"
+      },
+      {
+        "filename": "Sketch.pdf",
+        "path": "/Users/shrikar/Desktop/3d virtual portfolio/context_lens_ai/backend/data/eval_suite/SYNTH-20-MORTGAGE/Sketch.pdf",
+        "type": "SURVEY_SKETCH"
+      }
+    ]
+  }
+]

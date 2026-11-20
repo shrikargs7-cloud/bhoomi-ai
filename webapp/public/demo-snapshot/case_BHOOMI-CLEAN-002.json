@@ -1,0 +1,754 @@
+{
+  "case_id": "BHOOMI-CLEAN-002",
+  "case_name": "Mandya Survey 112/3 Clean Title Verification",
+  "village": "Chikkarasinakere",
+  "hobli": "Koppa",
+  "taluk": "Maddur",
+  "district": "Mandya",
+  "survey_number": "112/3",
+  "created_at": "2026-11-20 13:54:39 UTC",
+  "synthetic": true,
+  "is_public_demo": true,
+  "external_llm_consent": false,
+  "disclaimer": "Synthetic demo data — decision support only. NOT legal certification of title, boundaries, mutations, valuation, or loan eligibility.",
+  "documents": [
+    {
+      "id": "doc-eb14b6a3",
+      "filename": "RTC_Mandya_112_3_2024.pdf",
+      "doc_type": "RTC",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 3,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "bd61d60fc8b57f20952f74df66a5ed06b38310f8b840845f68306454893b9427",
+      "language": "English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-0d6f59cc",
+          "field_name": "survey_number",
+          "label": "Survey Number",
+          "original_text": "Survey No: 112/3",
+          "normalized_value": "112/3",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 14.59,
+            "width": 14.51,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-da6bfad3",
+          "field_name": "hissa",
+          "label": "Hissa / Sub-Division",
+          "original_text": "Hissa / Sub-Div: A",
+          "normalized_value": "A",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 28.37,
+            "y": 14.59,
+            "width": 15.22,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-e610ebab",
+          "field_name": "khata_number",
+          "label": "Khata Number",
+          "original_text": "Khata No: 518",
+          "normalized_value": "518",
+          "confidence": 0.97,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 50.21,
+            "y": 14.59,
+            "width": 12.52,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-c5d2b893",
+          "field_name": "record_date",
+          "label": "Record Date",
+          "original_text": "Record Date: 10/02/2024",
+          "normalized_value": "10/02/2024",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 72.05,
+            "y": 14.59,
+            "width": 19.43,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-4695bb96",
+          "field_name": "district",
+          "label": "District",
+          "original_text": "District: Mandya",
+          "normalized_value": "Mandya",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 12.03,
+            "width": 13.87,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-92b9c493",
+          "field_name": "taluk",
+          "label": "Taluk",
+          "original_text": "Taluk: Maddur",
+          "normalized_value": "Maddur",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 28.37,
+            "y": 12.03,
+            "width": 12.44,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-e28fdf17",
+          "field_name": "village",
+          "label": "Village",
+          "original_text": "Village: Chikkarasinakere",
+          "normalized_value": "Chikkarasinakere",
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 72.05,
+            "y": 12.03,
+            "width": 19.51,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-4c44e4df",
+          "field_name": "total_extent",
+          "label": "Total Extent",
+          "original_text": "2-00 (2 Acres 0 Guntas)",
+          "normalized_value": 2.0,
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 24.17,
+            "y": 20.89,
+            "width": 18.87,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-a1c1739a",
+          "field_name": "recorded_owners",
+          "label": "Column 9 Recorded Owners",
+          "original_text": "Smt. Savithramma",
+          "normalized_value": [
+            "Savithramma"
+          ],
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 11.57,
+            "y": 29.8,
+            "width": 15.46,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-64d8e74b",
+          "field_name": "column_11_encumbrance",
+          "label": "Column 11 Liabilities & Encumbrances",
+          "original_text": "Nil encumbrances or charges recorded.",
+          "normalized_value": "Nil encumbrances or charges recorded.",
+          "confidence": 0.97,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 37.63,
+            "width": 27.6,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.967,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    },
+    {
+      "id": "doc-d894c143",
+      "filename": "Sale_Deed_Mandya_2019.pdf",
+      "doc_type": "SALE_DEED",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 2,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "0fd358283f3a2c577fd049c04fecb8d30f2ffb1bc7c4d60f7bdfac8d76c60c21",
+      "language": "English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-270d583b",
+          "field_name": "registration_number",
+          "label": "Deed Registration Number",
+          "original_text": "Registration Number: MAD-1-00894-2019-20",
+          "normalized_value": "MAD-1-00894-2019-20",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 40.02,
+            "y": 8.12,
+            "width": 16.74,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-f49b6551",
+          "field_name": "execution_date",
+          "label": "Deed Execution Date",
+          "original_text": "15/05/2019",
+          "normalized_value": "15/05/2019",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 64.72,
+            "y": 8.12,
+            "width": 9.72,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-42da2121",
+          "field_name": "allottee",
+          "label": "Schedule A Allottee / Purchaser",
+          "original_text": "Smt. Savithramma",
+          "normalized_value": "Savithramma",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 7.84,
+            "y": 14.41,
+            "width": 15.46,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-438b42f3",
+          "field_name": "survey_number",
+          "label": "Schedule A Survey Number",
+          "original_text": "Survey No. 112/3",
+          "normalized_value": "112/3",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 38.11,
+            "y": 24.21,
+            "width": 6.57,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-c2d2eb37",
+          "field_name": "extent_allotted",
+          "label": "Schedule A Allotted Extent",
+          "original_text": "2 Acres 0 Guntas (2-00)",
+          "normalized_value": 2.0,
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 51.89,
+            "y": 24.21,
+            "width": 18.87,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.978,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    },
+    {
+      "id": "doc-99dd8fae",
+      "filename": "Mutation_Mandya_MR_2020_14.pdf",
+      "doc_type": "MUTATION_EXTRACT",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 20,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "e821df78a5a32ba605dfc5e2c0eee756bc115951daf4f89190dd51c1bda26b51",
+      "language": "Kannada / English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-7d66880c",
+          "field_name": "mutation_number",
+          "label": "Mutation Number",
+          "original_text": "MUTATION NUMBER: MR/2020-21/14",
+          "normalized_value": "MR/2020-21/14",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 45.85,
+            "y": 7.89,
+            "width": 12.26,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-5a4a3a94",
+          "field_name": "mutation_date",
+          "label": "Mutation Certification Date",
+          "original_text": "18/06/2020",
+          "normalized_value": "18/06/2020",
+          "confidence": 0.97,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 59.79,
+            "y": 7.89,
+            "width": 9.72,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-ecff0709",
+          "field_name": "survey_number",
+          "label": "Survey Number",
+          "original_text": "Survey No: 112/3",
+          "normalized_value": "112/3",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 43.02,
+            "y": 14.59,
+            "width": 6.57,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-b0e5d221",
+          "field_name": "mutation_type",
+          "label": "Mutation Reason / Type",
+          "original_text": "Registered Sale Mutation (MR/2020-21/14)",
+          "normalized_value": "Registered Sale Mutation (MR/2020-21/14)",
+          "confidence": 0.94,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 23.15,
+            "y": 17.74,
+            "width": 22.12,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-3e35a17d",
+          "field_name": "transferred_extent",
+          "label": "Transferred Extent",
+          "original_text": "2-00 (2 Acres 0 Guntas)",
+          "normalized_value": 2.0,
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 50.21,
+            "y": 27.36,
+            "width": 5.86,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-a5a0f6e9",
+          "field_name": "balance_remarks",
+          "label": "Balance / Mutation Remarks",
+          "original_text": "0-00 (Complete transfer)",
+          "normalized_value": "0-00 (Complete transfer)",
+          "confidence": 0.93,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 72.05,
+            "y": 27.36,
+            "width": 16.41,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-91ca1112",
+          "field_name": "is_inheritance_mutation",
+          "label": "Inheritance (Pauti Khata) Recorded?",
+          "original_text": "Partition/Sale Mutation Only",
+          "normalized_value": false,
+          "confidence": 0.93,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 40.25,
+            "y": 14.59,
+            "width": 4.9,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.954,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    }
+  ],
+  "persons": [
+    {
+      "id": "BHOOMI-CLEAN-002-PER-01",
+      "canonical_name": "Savithramma",
+      "normalized_name": "savithramma",
+      "aliases": [
+        "Savithramma"
+      ],
+      "is_deceased": false,
+      "date_of_death": null,
+      "resolution_status": "confirmed",
+      "similarity_score": 1.0
+    }
+  ],
+  "ownership_events": [
+    {
+      "id": "BHOOMI-CLEAN-002-EVT-01",
+      "date": "15/05/2019",
+      "event_type": "sale",
+      "description": "Registered Sale Deed (MAD-1-00894-2019-20) for Survey No. 112/3: Schedule A allotted/conveyed to Savithramma (2-0 (2 acres 0 guntas)).",
+      "parties_involved": [
+        "Savithramma"
+      ],
+      "extent_affected": "2-0 (2 acres 0 guntas)",
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-d894c143",
+        "document_name": "Sale_Deed_Mandya_2019.pdf",
+        "page": 1,
+        "original_text": "2 Acres 0 Guntas (2-00)",
+        "bounding_box": {
+          "x": 51.89,
+          "y": 24.21,
+          "width": 18.87,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-CLEAN-002-EVT-02",
+      "date": "18/06/2020",
+      "event_type": "mutation",
+      "description": "Mutation Extract MR/2020-21/14 (Registered Sale Mutation (MR/2020-21/14)) certified. Transferred extent: 2-0 (2 acres 0 guntas).",
+      "parties_involved": [],
+      "extent_affected": "2-0 (2 acres 0 guntas)",
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-99dd8fae",
+        "document_name": "Mutation_Mandya_MR_2020_14.pdf",
+        "page": 1,
+        "original_text": "Registered Sale Mutation (MR/2020-21/14)",
+        "bounding_box": {
+          "x": 23.15,
+          "y": 17.74,
+          "width": 22.12,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-CLEAN-002-EVT-03",
+      "date": "10/02/2024",
+      "event_type": "rtc_record",
+      "description": "RTC Form 16 for Survey No. 112/3 lists recorded owner(s): Savithramma. Recorded extent: 2-0 (2 acres 0 guntas).",
+      "parties_involved": [
+        "Savithramma"
+      ],
+      "extent_affected": "2-0 (2 acres 0 guntas)",
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-eb14b6a3",
+        "document_name": "RTC_Mandya_112_3_2024.pdf",
+        "page": 1,
+        "original_text": "Smt. Savithramma",
+        "bounding_box": {
+          "x": 11.57,
+          "y": 29.8,
+          "width": 15.46,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-CLEAN-002-EVT-04",
+      "date": null,
+      "event_type": "mortgage",
+      "description": "Encumbrance noted in RTC Column 11 for Survey No. 112/3: Nil encumbrances or charges recorded. (Supporting deed requires verification).",
+      "parties_involved": [
+        "Savithramma"
+      ],
+      "extent_affected": "Survey No. 112/3",
+      "status": "unresolved",
+      "evidence": {
+        "document_id": "doc-eb14b6a3",
+        "document_name": "RTC_Mandya_112_3_2024.pdf",
+        "page": 1,
+        "original_text": "Nil encumbrances or charges recorded.",
+        "bounding_box": {
+          "x": 6.53,
+          "y": 37.63,
+          "width": 27.6,
+          "height": 2.79
+        }
+      }
+    }
+  ],
+  "discrepancies": [],
+  "readiness_dimensions": [
+    {
+      "dimension_name": "Document Completeness",
+      "status": "Pass",
+      "checks_run": 5,
+      "issues_found": 0,
+      "evidence_count": 3,
+      "missing_items": [],
+      "review_status": "Pass",
+      "summary": "All 3 uploaded documents parsed and verified with no missing supporting deeds."
+    },
+    {
+      "dimension_name": "Ownership Consistency",
+      "status": "Pass",
+      "checks_run": 4,
+      "issues_found": 0,
+      "evidence_count": 4,
+      "missing_items": [],
+      "review_status": "Verified",
+      "summary": "Ownership chain consistent across 4 documented event(s); no deceased holders recorded."
+    },
+    {
+      "dimension_name": "Mutation Consistency",
+      "status": "Pass",
+      "checks_run": 3,
+      "issues_found": 0,
+      "evidence_count": 1,
+      "missing_items": [],
+      "review_status": "Verified",
+      "summary": "Mutation Register extracts align with recorded conveyance/title events."
+    },
+    {
+      "dimension_name": "Extent Consistency",
+      "status": "Pass",
+      "checks_run": 4,
+      "issues_found": 0,
+      "evidence_count": 3,
+      "missing_items": [],
+      "review_status": "Verified",
+      "summary": "Survey numbers and stated land extents match across all uploaded documents within ±0.01 acre tolerance."
+    },
+    {
+      "dimension_name": "Boundary Evidence",
+      "status": "Insufficient Evidence",
+      "checks_run": 4,
+      "issues_found": 1,
+      "evidence_count": 0,
+      "missing_items": [
+        "Tippani / Survey Sketch or valid GeoJSON"
+      ],
+      "review_status": "Missing",
+      "summary": "No Tippani survey sketch or valid GeoJSON boundary file supplied."
+    },
+    {
+      "dimension_name": "Valuation Evidence",
+      "status": "Insufficient Evidence",
+      "checks_run": 1,
+      "issues_found": 0,
+      "evidence_count": 0,
+      "missing_items": [
+        "Minimum 3 verified comparables required (currently 0)"
+      ],
+      "review_status": "Abstained",
+      "summary": "Insufficient verified comparable evidence to produce a reliable valuation."
+    }
+  ],
+  "latest_workflow_run": {
+    "id": "RUN-38d7b2b5",
+    "status": "completed",
+    "started_at": "2026-11-20 13:54:39 UTC",
+    "completed_at": "2026-11-20 13:54:39 UTC",
+    "trace": [
+      {
+        "node": "LOAD_CASE",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "summary": "Loaded case BHOOMI-CLEAN-002 with 3 document(s).",
+        "conditional_branch": null
+      },
+      {
+        "node": "VALIDATE_DOCS",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "summary": "Validated 3 doc(s); 0 flagged for re-upload, 0 injection attempt(s) isolated.",
+        "conditional_branch": "all_valid"
+      },
+      {
+        "node": "EXTRACT_AND_VALIDATE",
+        "status": "completed",
+        "duration_ms": 0.01,
+        "summary": "Verified 22 extracted field(s) with source citations; 0 low-confidence field(s) queued for human review.",
+        "conditional_branch": "high_confidence_pass"
+      },
+      {
+        "node": "OWNERSHIP_LINEAGE",
+        "status": "completed",
+        "duration_ms": 0.16,
+        "summary": "Resolved 1 person entity(s) and 4 chronological ownership event(s).",
+        "conditional_branch": "lineage_built"
+      },
+      {
+        "node": "DISCREPANCY_ENGINE",
+        "status": "completed",
+        "duration_ms": 0.03,
+        "summary": "Evaluated deterministic rules R1–R5: 0 discrepancy finding(s) raised.",
+        "conditional_branch": "clean_pass"
+      },
+      {
+        "node": "GIS_MODULE",
+        "status": "skipped",
+        "duration_ms": 0.0,
+        "summary": "No GeoJSON supplied — skipped GIS polygon QA (showing survey sketch only).",
+        "conditional_branch": "skip_gis_no_geometry"
+      },
+      {
+        "node": "VALUATION_MODULE",
+        "status": "skipped",
+        "duration_ms": 0.0,
+        "summary": "Insufficient verified comparables (<3) — abstained per SPEC Section 10.",
+        "conditional_branch": "abstain_insufficient_comparables"
+      },
+      {
+        "node": "UNSUPPORTED_CLAIM_VERIFIER",
+        "status": "completed",
+        "duration_ms": 0.02,
+        "summary": "100% of 0 finding(s) and 4 event(s) verified against document, page, and extracted field values.",
+        "conditional_branch": "all_claims_grounded"
+      },
+      {
+        "node": "HUMAN_REVIEW_CHECKPOINT",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "summary": "All findings reviewed by officer.",
+        "conditional_branch": "review_complete"
+      }
+    ]
+  },
+  "review_decisions": [],
+  "audit_logs": [
+    {
+      "id": "aud-a465e5fd8c",
+      "actor_name": "BhoomiAI Pipeline",
+      "actor_role": "system",
+      "action": "PIPELINE_RUN",
+      "details": "Run RUN-38d7b2b5: 3 docs, 4 events, 0 discrepancies.",
+      "created_at": "2026-11-20 13:54:39 UTC"
+    },
+    {
+      "id": "aud-4c88f41ebc",
+      "actor_name": "BhoomiAI Seed",
+      "actor_role": "system",
+      "action": "CASE_SEEDED",
+      "details": "Seeded synthetic clean case BHOOMI-CLEAN-002 (3 PDFs).",
+      "created_at": "2026-11-20 13:54:39 UTC"
+    }
+  ],
+  "status": "reviewed_clean"
+}

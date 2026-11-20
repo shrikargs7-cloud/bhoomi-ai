@@ -1,0 +1,227 @@
+{
+  "case_id": "BHOOMI-DEMO-001",
+  "nodes": [
+    {
+      "id": "Parcel:84/1",
+      "node_type": "Parcel",
+      "label": "Survey No. 84/1",
+      "meta": {
+        "survey_number": "84/1"
+      }
+    },
+    {
+      "id": "Person:Ramachandrappa",
+      "node_type": "Person",
+      "label": "Ramachandrappa",
+      "meta": {
+        "is_deceased": true,
+        "date_of_death": "14/03/2016",
+        "resolution_status": "confirmed",
+        "similarity_score": 1.0
+      }
+    },
+    {
+      "id": "Person:Venkatesh R",
+      "node_type": "Person",
+      "label": "Venkatesh R",
+      "meta": {
+        "is_deceased": false,
+        "date_of_death": null,
+        "resolution_status": "confirmed",
+        "similarity_score": 1.0
+      }
+    },
+    {
+      "id": "Doc:RTC_Form16_2023.pdf",
+      "node_type": "Document",
+      "label": "RTC_Form16_2023.pdf",
+      "meta": {
+        "doc_type": "RTC",
+        "doc_id": "doc-ccf7a89a"
+      }
+    },
+    {
+      "id": "Doc:Death_Certificate_Ramachandrappa.pdf",
+      "node_type": "Document",
+      "label": "Death_Certificate_Ramachandrappa.pdf",
+      "meta": {
+        "doc_type": "DEATH_CERTIFICATE",
+        "doc_id": "doc-30f4f927"
+      }
+    },
+    {
+      "id": "Doc:Partition_Deed_2011_Registered.pdf",
+      "node_type": "Document",
+      "label": "Partition_Deed_2011_Registered.pdf",
+      "meta": {
+        "doc_type": "PARTITION_DEED",
+        "doc_id": "doc-a20f41ac"
+      }
+    },
+    {
+      "id": "Doc:Mutation_Extract_MR_2018_09.pdf",
+      "node_type": "Document",
+      "label": "Mutation_Extract_MR_2018_09.pdf",
+      "meta": {
+        "doc_type": "MUTATION_EXTRACT",
+        "doc_id": "doc-d16ad549"
+      }
+    },
+    {
+      "id": "Doc:Survey_Sketch_Tippani_84_1.pdf",
+      "node_type": "Document",
+      "label": "Survey_Sketch_Tippani_84_1.pdf",
+      "meta": {
+        "doc_type": "SURVEY_SKETCH",
+        "doc_id": "doc-6191bc42"
+      }
+    },
+    {
+      "id": "Event:BHOOMI-DEMO-001-EVT-01",
+      "node_type": "Event",
+      "label": "PARTITION (12/08/2011)",
+      "meta": {
+        "date": "12/08/2011",
+        "event_type": "partition",
+        "status": "documented",
+        "description": "Registered Partition Deed (RAM-1-01420-2011-12) for Survey No. 84/1: Schedule A allotted/conveyed to Venkatesh R (2-15 (2 acres 15 guntas))."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-DEMO-001-EVT-02",
+      "node_type": "Event",
+      "label": "DEATH (14/03/2016)",
+      "meta": {
+        "date": "14/03/2016",
+        "event_type": "death",
+        "status": "documented",
+        "description": "Demise of Ramachandrappa at Government General Hospital, Bidadi, Ramanagara Dist. Official Death Certificate Reg No: DC/2016/0482."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-DEMO-001-EVT-03",
+      "node_type": "Event",
+      "label": "MUTATION (04/11/2018)",
+      "meta": {
+        "date": "04/11/2018",
+        "event_type": "mutation",
+        "status": "documented",
+        "description": "Mutation Extract MR/2018-19/09 (Partition Transfer (Partial Entry per 2011 Deed)) certified. Transferred extent: 0-37-8 (0 acres 37 guntas 8 annas)."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-DEMO-001-EVT-04",
+      "node_type": "Event",
+      "label": "MORTGAGE (18/06/2019)",
+      "meta": {
+        "date": "18/06/2019",
+        "event_type": "mortgage",
+        "status": "unresolved",
+        "description": "Encumbrance noted in RTC Column 11 for Survey No. 84/1: Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41). (Supporting deed requires verification)."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-DEMO-001-EVT-05",
+      "node_type": "Event",
+      "label": "RTC_RECORD (12/04/2023)",
+      "meta": {
+        "date": "12/04/2023",
+        "event_type": "rtc_record",
+        "status": "documented",
+        "description": "RTC Form 16 for Survey No. 84/1 lists recorded owner(s): Ramachandrappa, Venkatesh R. Recorded extent: 1-35 (1 acres 35 guntas)."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "Event:BHOOMI-DEMO-001-EVT-01",
+      "target": "Parcel:84/1",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:Partition_Deed_2011_Registered.pdf",
+      "target": "Event:BHOOMI-DEMO-001-EVT-01",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Venkatesh R",
+      "target": "Event:BHOOMI-DEMO-001-EVT-01",
+      "relation": "PARTICIPATES_IN"
+    },
+    {
+      "source": "Event:BHOOMI-DEMO-001-EVT-02",
+      "target": "Parcel:84/1",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:Death_Certificate_Ramachandrappa.pdf",
+      "target": "Event:BHOOMI-DEMO-001-EVT-02",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Ramachandrappa",
+      "target": "Event:BHOOMI-DEMO-001-EVT-02",
+      "relation": "PARTICIPATES_IN"
+    },
+    {
+      "source": "Event:BHOOMI-DEMO-001-EVT-03",
+      "target": "Parcel:84/1",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:Mutation_Extract_MR_2018_09.pdf",
+      "target": "Event:BHOOMI-DEMO-001-EVT-03",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Event:BHOOMI-DEMO-001-EVT-04",
+      "target": "Parcel:84/1",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:RTC_Form16_2023.pdf",
+      "target": "Event:BHOOMI-DEMO-001-EVT-04",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Ramachandrappa",
+      "target": "Event:BHOOMI-DEMO-001-EVT-04",
+      "relation": "PARTICIPATES_IN"
+    },
+    {
+      "source": "Person:Venkatesh R",
+      "target": "Event:BHOOMI-DEMO-001-EVT-04",
+      "relation": "PARTICIPATES_IN"
+    },
+    {
+      "source": "Event:BHOOMI-DEMO-001-EVT-05",
+      "target": "Parcel:84/1",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:RTC_Form16_2023.pdf",
+      "target": "Event:BHOOMI-DEMO-001-EVT-05",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Ramachandrappa",
+      "target": "Event:BHOOMI-DEMO-001-EVT-05",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Person:Ramachandrappa",
+      "target": "Parcel:84/1",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Person:Venkatesh R",
+      "target": "Event:BHOOMI-DEMO-001-EVT-05",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Person:Venkatesh R",
+      "target": "Parcel:84/1",
+      "relation": "OWNS"
+    }
+  ]
+}

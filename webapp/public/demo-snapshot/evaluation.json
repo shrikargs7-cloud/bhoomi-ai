@@ -1,0 +1,363 @@
+{
+  "extraction": {
+    "golden_case_id": "BHOOMI-DEMO-001",
+    "overall_precision_pct": 100.0,
+    "overall_recall_pct": 100.0,
+    "total_expected_fields": 22,
+    "total_matched_fields": 22,
+    "by_document": [
+      {
+        "filename": "RTC_Form16_2023.pdf",
+        "doc_type": "RTC",
+        "language": "English",
+        "expected_fields": 6,
+        "matched_fields": 6,
+        "precision_pct": 100.0,
+        "recall_pct": 100.0,
+        "has_bbox_rate_pct": 100.0
+      },
+      {
+        "filename": "Death_Certificate_Ramachandrappa.pdf",
+        "doc_type": "DEATH_CERTIFICATE",
+        "language": "Kannada / English",
+        "expected_fields": 4,
+        "matched_fields": 4,
+        "precision_pct": 100.0,
+        "recall_pct": 100.0,
+        "has_bbox_rate_pct": 100.0
+      },
+      {
+        "filename": "Partition_Deed_2011_Registered.pdf",
+        "doc_type": "PARTITION_DEED",
+        "language": "English",
+        "expected_fields": 5,
+        "matched_fields": 5,
+        "precision_pct": 100.0,
+        "recall_pct": 100.0,
+        "has_bbox_rate_pct": 100.0
+      },
+      {
+        "filename": "Mutation_Extract_MR_2018_09.pdf",
+        "doc_type": "MUTATION_EXTRACT",
+        "language": "Kannada / English",
+        "expected_fields": 4,
+        "matched_fields": 4,
+        "precision_pct": 100.0,
+        "recall_pct": 100.0,
+        "has_bbox_rate_pct": 100.0
+      },
+      {
+        "filename": "Survey_Sketch_Tippani_84_1.pdf",
+        "doc_type": "SURVEY_SKETCH",
+        "language": "English",
+        "expected_fields": 3,
+        "matched_fields": 3,
+        "precision_pct": 100.0,
+        "recall_pct": 100.0,
+        "has_bbox_rate_pct": 100.0
+      }
+    ],
+    "by_doc_type": {
+      "RTC": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      },
+      "DEATH_CERTIFICATE": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      },
+      "PARTITION_DEED": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      },
+      "MUTATION_EXTRACT": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      },
+      "SURVEY_SKETCH": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      }
+    },
+    "by_language": {
+      "English": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      },
+      "Kannada / Bilingual": {
+        "precision_pct": 100.0,
+        "recall_pct": 100.0
+      }
+    },
+    "benchmark_20_cases_docs_evaluated": 52,
+    "benchmark_20_cases_classification_accuracy_pct": 100.0
+  },
+  "discrepancies": {
+    "golden_case": {
+      "case_id": "BHOOMI-DEMO-001",
+      "expected": [
+        "R1",
+        "R2",
+        "R3",
+        "R5"
+      ],
+      "detected": [
+        "R1",
+        "R2",
+        "R3",
+        "R5"
+      ],
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision_pct": 100.0,
+      "recall_pct": 100.0,
+      "engine_latency_ms": 0.2
+    },
+    "benchmark_20_cases": {
+      "total_cases": 20,
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision_pct": 100.0,
+      "recall_pct": 100.0,
+      "false_positive_rate_pct": 0.0,
+      "clean_cases_passed": "4/4",
+      "unsupported_claim_rate_pct": 0.0,
+      "cases": [
+        {
+          "case_id": "SYNTH-01-CLEAN",
+          "expected": [],
+          "detected": [],
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-02-CLEAN",
+          "expected": [],
+          "detected": [],
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-03-CLEAN",
+          "expected": [],
+          "detected": [],
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-04-CLEAN",
+          "expected": [],
+          "detected": [],
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-05-DECEASED",
+          "expected": [
+            "R1",
+            "R3"
+          ],
+          "detected": [
+            "R1",
+            "R3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-06-DECEASED",
+          "expected": [
+            "R1",
+            "R3"
+          ],
+          "detected": [
+            "R1",
+            "R3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-07-DECEASED",
+          "expected": [
+            "R1",
+            "R3"
+          ],
+          "detected": [
+            "R1",
+            "R3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-08-DECEASED",
+          "expected": [
+            "R1",
+            "R3"
+          ],
+          "detected": [
+            "R1",
+            "R3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-09-EXTENT",
+          "expected": [
+            "R2"
+          ],
+          "detected": [
+            "R2"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-10-EXTENT",
+          "expected": [
+            "R2"
+          ],
+          "detected": [
+            "R2"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-11-EXTENT",
+          "expected": [
+            "R2"
+          ],
+          "detected": [
+            "R2"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-12-EXTENT",
+          "expected": [
+            "R2"
+          ],
+          "detected": [
+            "R2"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-13-SURVEY",
+          "expected": [
+            "R4"
+          ],
+          "detected": [
+            "R4"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-14-SURVEY",
+          "expected": [
+            "R4"
+          ],
+          "detected": [
+            "R4"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-15-SURVEY",
+          "expected": [
+            "R4"
+          ],
+          "detected": [
+            "R4"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-16-SURVEY",
+          "expected": [
+            "R4"
+          ],
+          "detected": [
+            "R4"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-17-MORTGAGE",
+          "expected": [
+            "R5"
+          ],
+          "detected": [
+            "R5"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-18-MORTGAGE",
+          "expected": [
+            "R5"
+          ],
+          "detected": [
+            "R5"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-19-MORTGAGE",
+          "expected": [
+            "R5"
+          ],
+          "detected": [
+            "R5"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "case_id": "SYNTH-20-MORTGAGE",
+          "expected": [
+            "R5"
+          ],
+          "detected": [
+            "R5"
+          ],
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      ]
+    }
+  }
+}

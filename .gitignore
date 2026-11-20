@@ -1,0 +1,26 @@
+# Environments & secrets
+.env
+.env.*
+!.env.example
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+.pytest_cache/
+backend/data/bhoomiai.db
+backend/data/reports/
+.venv/
+venv/
+
+# Node / Webapp
+webapp/node_modules/
+webapp/dist/
+webapp/*.tsbuildinfo
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

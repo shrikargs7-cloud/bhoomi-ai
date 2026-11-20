@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bhoomi-ai-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: BHOOMI_JWT_SECRET
+        generateValue: true
+      - key: BHOOMI_DATABASE_URL
+        value: sqlite:///./data/bhoomiai.db
+      - key: BHOOMI_CORS_ORIGINS
+        value: https://shrikargs7-cloud.github.io,http://127.0.0.1:5173,http://localhost:5173
+      - key: BHOOMI_RATE_LIMIT_ENABLED
+        value: "true"
+      - key: BHOOMI_RATE_LIMIT_RPM
+        value: "120"

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "LAW-KLRA-128",
+    "title": "Karnataka Land Revenue Act, 1964 (and Rules, 1966)",
+    "jurisdiction": "Karnataka State",
+    "section": "Sections 128, 129 & 135; Rule 42–66",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Section 128 requires any person acquiring right by succession, survivorship, inheritance, partition, purchase, or mortgage to report acquisition to the prescribed officer (or via Sub-Registrar J-slip). Section 129 governs the Register of Mutations and certification after notice/objections. Under Section 133, RTC entries carry a presumption of correctness until lawfully amended or displaced by a civil court declaration."
+  },
+  {
+    "id": "LAW-REG-17",
+    "title": "Registration Act, 1908",
+    "jurisdiction": "India (Central Act applicable in Karnataka)",
+    "section": "Sections 17 & 49",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Section 17(1) mandates compulsory registration of non-testamentary instruments creating, declaring, assigning, limiting, or extinguishing right, title, or interest in immovable property valued at Rs. 100 or upwards (including sale deeds, partition deeds, and simple mortgages). Under Section 49, an unregistered document required to be registered under Section 17 cannot affect immovable property or be received as evidence of any transaction affecting it."
+  },
+  {
+    "id": "LAW-TPA-54",
+    "title": "Transfer of Property Act, 1882",
+    "jurisdiction": "India (Central Act)",
+    "section": "Sections 54, 58 & 60",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Section 54 defines sale of immovable property and requires a registered instrument for transfers >= Rs. 100. Section 58 defines mortgages and charges; when a mortgage is recorded in revenue Column 11, Section 60 governs the mortgagor's right of redemption and discharge upon repayment via a registered receipt/reconveyance or bank NOC."
+  },
+  {
+    "id": "LAW-HSA-6",
+    "title": "Hindu Succession Act, 1956 (as amended 2005)",
+    "jurisdiction": "India (Central Act)",
+    "section": "Sections 6 & 8",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Section 6 confers coparcenary rights by birth equally on daughters and sons in joint family property. Section 8 prescribes the Class I legal heirs (widow, sons, daughters, mother) for devolution of separate property of a male Hindu dying intestate. A family tree alone demonstrates kinship; mutation requires formal application and notice."
+  },
+  {
+    "id": "LAW-KLR-1974",
+    "title": "Karnataka Land Reforms Act, 1961 (Act 10 of 1962 / amended 1974)",
+    "jurisdiction": "Karnataka State",
+    "section": "Sections 63, 79A/79B (omitted 2020) & Section 80",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Governs agricultural land ceiling limits (Section 63) and tenancy protections. Note that Karnataka Ordinance/Act 2020 omitted Sections 79A, 79B, and 79C prospectively/retrospectively subject to pending proceedings, while SC/ST granted land restrictions under the Karnataka PTCL Act 1978 remain distinct and require verification."
+  },
+  {
+    "id": "LAW-KSA-1957",
+    "title": "Karnataka Stamp Act, 1957",
+    "jurisdiction": "Karnataka State",
+    "section": "Article 20 (Conveyance) & Article 39 (Partition)",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Specifies stamp duty rates on instruments executed in Karnataka, including concessional fixed/family rates for family partitions among family members under Article 39 and market-value-based duties under Section 45A."
+  },
+  {
+    "id": "LAW-BHOOMI-PROC",
+    "title": "Karnataka Revenue Dept — Bhoomi / Mojini Mutation & Phodi Procedure",
+    "jurisdiction": "Karnataka State",
+    "section": "Pauti Khata & 11E / Tatkal Phodi Guidelines",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "For extent mismatches between registered partition/sale deeds and RTC, Mojini 11E / Tatkal Phodi survey reconciles hissa boundaries against the village Akarband and Tippani. For deceased owners, Pauti Khata must be initiated at Nadakacheri (Atalji Janasnehi Kendra) with Death Certificate and Family Tree (Vamsha Vruksha)."
+  },
+  {
+    "id": "LAW-DPDP-2023",
+    "title": "Digital Personal Data Protection Act, 2023",
+    "jurisdiction": "India",
+    "section": "Sections 4, 6 & 8",
+    "retrieval_date": "2026-11-15 (Curated Offline Reference)",
+    "summary": "Requires clear, specific, informed consent (Section 6) before processing personal data such as owner Aadhaar/IDs or transmitting personal land records to third-party services, along with strict purpose limitation and safeguards."
+  }
+]

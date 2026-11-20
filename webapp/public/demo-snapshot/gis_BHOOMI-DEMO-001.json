@@ -1,0 +1,12 @@
+{
+  "case_id": "BHOOMI-DEMO-001",
+  "has_geometry": false,
+  "source_description": null,
+  "synthetic": false,
+  "message": "No GeoJSON supplied. Per SPEC Section 11, BhoomiAI never invents polygons from survey numbers — inspect the uploaded Tippani Survey Sketch or upload a valid GeoJSON.",
+  "geojson": null,
+  "computed_area_acres": null,
+  "rtc_extent_acres": 1.875,
+  "area_variance_acres": null,
+  "qa_checks": []
+}

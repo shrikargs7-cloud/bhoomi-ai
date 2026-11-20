@@ -1,0 +1,83 @@
+# BhoomiAI — Land Readiness, Remedy & Collateral Intelligence Agent
+
+[![Live Hosted Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-1E8255?style=for-the-badge)](https://shrikargs7-cloud.github.io/bhoomi-ai/)
+[![GitHub Repo](https://img.shields.io/badge/Source-GitHub-123D32?style=for-the-badge)](https://github.com/shrikargs7-cloud/bhoomi-ai)
+
+BhoomiAI is an evidence-first, goal-driven rural land intelligence prototype built for **Problem Statement 1.2**:
+
+> **Goal: Help farming families and rural lenders prepare a land parcel to sell, inherit, or borrow against.**
+> **Upload land documents → extract fields with bounding-box source evidence → reconstruct ownership lineage → run deterministic cross-document rules (`R1–R5`) → human reviewer approval gate → QR-sealed PDF Land Readiness Report.**
+
+*Decision support only — NOT legal certification of title, boundaries, mutations, valuation, or loan eligibility.*
+
+---
+
+## Live Links & Presentation Materials
+
+- **Live Hosted Interactive Prototype:** https://shrikargs7-cloud.github.io/bhoomi-ai/
+- **GitHub Repository:** https://github.com/shrikargs7-cloud/bhoomi-ai
+- **Pitch Deck (10 Core Slides + 8 Q&A Appendix):** [slides/BhoomiAI_Pitch_Deck.pptx](slides/BhoomiAI_Pitch_Deck.pptx)
+
+*(The GitHub Pages deployment serves pre-computed FastAPI / PyMuPDF / ReportLab demo snapshots for `BHOOMI-DEMO-001` and `BHOOMI-CLEAN-002`, enabling interactive PDF page previews, bbox inspection, NetworkX ownership graph navigation, Leaflet GeoJSON QA, comparable valuation controls, and extent conversion directly in the browser.)*
+
+---
+
+## Architecture
+
+```
+React + TypeScript + Vite + Tailwind
+  ├── /              Readiness Dashboard (6 independent dimensions, pipeline trace, audit log)
+  ├── /documents     Document Intake, Library, Field Review Queue & Live Evaluation Benchmarks
+  ├── /title-report  8-Section Interactive Title Audit, Discrepancies (R1–R5) & Statutory Legal Q&A
+  ├── /ownership     NetworkX Ownership Pedigree Graph, Event Timeline & Entity Resolution
+  ├── /gis           Tippani Sketch Evidence & Supplied GeoJSON Polygon QA Validator
+  └── /valuation     Comparable Valuation Baseline (abstains <3 verified) & Extent Unit Converter
+          │
+          ▼ HTTP / JSON / Multipart / PNG / PDF (auto-fallback to static snapshot when headless)
+FastAPI + SQLAlchemy + SQLite/PostGIS + PyMuPDF + NetworkX + ReportLab + LangGraph
+```
+
+Legacy routes (`/oxland`, `/rundocs`, `/reveal-title`, `/treemonk`, `/cadaster`, `/simple-cma`) map cleanly into the unified 6 pages.
+
+---
+
+## Live vs. Simulated Scope (Prototype Honesty)
+
+| Capability | Status | Scope & Notes |
+|---|---|---|
+| Auth & Case Isolation (`bcrypt` + `PyJWT`) | **Live in Prototype** | Strict `401`/`403` isolation on private cases |
+| PDF/Image Extraction & Bbox Evidence | **Live in Prototype** | PyMuPDF + Kannada numeral/transliteration parser + PNG previews |
+| Ownership Lineage DAG (`NetworkX` + Jaro-Winkler) | **Live in Prototype** | Chronological transfer graph + human entity confirmation |
+| Deterministic Legal Engine (`Rules Decide, LLMs Explain`) | **Live in Prototype** | Python rules (`R1–R5`), prompt-injection guard & cited statutory reference |
+| GeoJSON Polygon QA & Valuation Abstention | **Live in Prototype** | Closure/bounds/area checks + abstains when `< 3` verified comparables |
+| Human Approval Gate & ReportLab PDF Export | **Live in Prototype** | Preserves `original_text` separately from `reviewer_value` + signed PDF download |
+| State Land Portals (Bhoomi RTC / MR / EC / e-Courts) | **Simulated for Demo** | Uses synthetic local seed cases (`BHOOMI-DEMO-001`, `BHOOMI-CLEAN-002`) — no live gov API claims |
+| WhatsApp Kannada Voice + 2G IVR Gateway | **Design / Roadmap** | Documented in pitch deck for Phase 2 rural pilot |
+
+---
+
+## Quick Start (Full-Stack Local Run)
+
+### Option 1: Docker Compose (Recommended)
+```bash
+cp .env.example .env
+docker compose up --build
+# Frontend: http://127.0.0.1:5173
+# Backend API docs: http://127.0.0.1:8000/docs
+```
+
+### Option 2: Direct Dev Servers
+```bash
+# 1. Start FastAPI backend (port 8000)
+PYTHONPATH=backend python3 -m uvicorn app.main:app --port 8000 --host 127.0.0.1 --reload
+
+# 2. Start React Vite frontend (port 5173)
+cd webapp && npm install && npm run dev
+
+# 3. Run backend tests & synthetic evaluation suite
+PYTHONPATH=backend pytest backend/tests/ -v
+PYTHONPATH=backend python3 backend/scripts/evaluate_extraction.py
+PYTHONPATH=backend python3 backend/scripts/evaluate_discrepancies.py
+```
+
+See [docs/evaluation.md](docs/evaluation.md) for measured synthetic extraction precision, recall, and discrepancy evaluation details.

@@ -1,0 +1,1207 @@
+{
+  "case_id": "BHOOMI-DEMO-001",
+  "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+  "village": "Ramanagara Rural",
+  "hobli": "Bidadi",
+  "taluk": "Ramanagara",
+  "district": "Ramanagara",
+  "survey_number": "84/1",
+  "created_at": "2026-11-20 13:54:39 UTC",
+  "synthetic": true,
+  "is_public_demo": true,
+  "external_llm_consent": false,
+  "disclaimer": "Synthetic demo data — decision support only. NOT legal certification of title, boundaries, mutations, valuation, or loan eligibility.",
+  "documents": [
+    {
+      "id": "doc-ccf7a89a",
+      "filename": "RTC_Form16_2023.pdf",
+      "doc_type": "RTC",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 3,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "998ee1496d9ba26340b85e858830d239dfd64c52e77508d8eef785e3696dfc11",
+      "language": "English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-012e50cd",
+          "field_name": "survey_number",
+          "label": "Survey Number",
+          "original_text": "Survey No: 84/1",
+          "normalized_value": "84/1",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 14.59,
+            "width": 13.71,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-e888596a",
+          "field_name": "hissa",
+          "label": "Hissa / Sub-Division",
+          "original_text": "Hissa / Sub-Div: P1",
+          "normalized_value": "P1",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 28.37,
+            "y": 14.59,
+            "width": 16.01,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-27609590",
+          "field_name": "khata_number",
+          "label": "Khata Number",
+          "original_text": "Khata No: 342",
+          "normalized_value": "342",
+          "confidence": 0.97,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 50.21,
+            "y": 14.59,
+            "width": 12.52,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-516bc81c",
+          "field_name": "record_date",
+          "label": "Record Date",
+          "original_text": "Record Date: 12/04/2023",
+          "normalized_value": "12/04/2023",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 72.05,
+            "y": 14.59,
+            "width": 19.43,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-97b2bf82",
+          "field_name": "district",
+          "label": "District",
+          "original_text": "District: Ramanagara",
+          "normalized_value": "Ramanagara",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 12.03,
+            "width": 17.04,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-aa7255c8",
+          "field_name": "taluk",
+          "label": "Taluk",
+          "original_text": "Taluk: Ramanagara",
+          "normalized_value": "Ramanagara",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 28.37,
+            "y": 12.03,
+            "width": 15.86,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-3c9afe66",
+          "field_name": "village",
+          "label": "Village",
+          "original_text": "Village: Ramanagara Rural",
+          "normalized_value": "Ramanagara Rural",
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 72.05,
+            "y": 12.03,
+            "width": 20.54,
+            "height": 2.8
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-d6bf21ee",
+          "field_name": "total_extent",
+          "label": "Total Extent",
+          "original_text": "1-35 (1 Acre 35 Guntas)",
+          "normalized_value": 1.875,
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 24.17,
+            "y": 20.89,
+            "width": 18.87,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-f3cbfd84",
+          "field_name": "recorded_owners",
+          "label": "Column 9 Recorded Owners",
+          "original_text": "Sri Ramachandrappa, Sri Venkatesh R",
+          "normalized_value": [
+            "Ramachandrappa",
+            "Venkatesh R"
+          ],
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 11.57,
+            "y": 29.8,
+            "width": 17.28,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-35fe8870",
+          "field_name": "column_11_encumbrance",
+          "label": "Column 11 Liabilities & Encumbrances",
+          "original_text": "Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).",
+          "normalized_value": "Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).",
+          "confidence": 0.91,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 41.55,
+            "width": 27.44,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.961,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    },
+    {
+      "id": "doc-30f4f927",
+      "filename": "Death_Certificate_Ramachandrappa.pdf",
+      "doc_type": "DEATH_CERTIFICATE",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 16,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "4053836ba8ef9f817a6e58ed5da8bb6299df999f740f4be2f6476b6dad8684f6",
+      "language": "Kannada / English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-defe8ff2",
+          "field_name": "registration_number",
+          "label": "Death Registration No.",
+          "original_text": "Registration Number: DC/2016/0482",
+          "normalized_value": "DC/2016/0482",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 37.61,
+            "y": 16.31,
+            "width": 12.21,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-e6318851",
+          "field_name": "deceased_name",
+          "label": "Deceased Person Name",
+          "original_text": "RAMACHANDRAPPA",
+          "normalized_value": "Ramachandrappa",
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 37.61,
+            "y": 21.9,
+            "width": 17.43,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-bac8fb43",
+          "field_name": "date_of_death",
+          "label": "Date of Death",
+          "original_text": "14/03/2016",
+          "normalized_value": "14/03/2016",
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 37.61,
+            "y": 24.69,
+            "width": 10.15,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-dfcf063f",
+          "field_name": "place_of_death",
+          "label": "Place of Death",
+          "original_text": "Government General Hospital, Bidadi, Ramanagara Dist",
+          "normalized_value": "Government General Hospital, Bidadi, Ramanagara Dist",
+          "confidence": 0.94,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 37.61,
+            "y": 27.48,
+            "width": 22.28,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-f0b4ea7a",
+          "field_name": "father_or_husband_name",
+          "label": "Father's / Husband's Name",
+          "original_text": "Late Muniyappa",
+          "normalized_value": "Late Muniyappa",
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 37.61,
+            "y": 30.27,
+            "width": 13.16,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.97,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    },
+    {
+      "id": "doc-a20f41ac",
+      "filename": "Partition_Deed_2011_Registered.pdf",
+      "doc_type": "PARTITION_DEED",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 2,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "7660d8c73b1a051a492711fe51dbf7eb30187190e40c2a03303167d1058c4b71",
+      "language": "English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-1be85a75",
+          "field_name": "registration_number",
+          "label": "Deed Registration Number",
+          "original_text": "Registration Number: RAM-1-01420-2011-12",
+          "normalized_value": "RAM-1-01420-2011-12",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 40.02,
+            "y": 8.12,
+            "width": 16.74,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-1d2f34e4",
+          "field_name": "execution_date",
+          "label": "Deed Execution Date",
+          "original_text": "12/08/2011",
+          "normalized_value": "12/08/2011",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 64.72,
+            "y": 8.12,
+            "width": 9.72,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-400d3dbe",
+          "field_name": "allottee",
+          "label": "Schedule A Allottee / Purchaser",
+          "original_text": "Sri Venkatesh R",
+          "normalized_value": "Venkatesh R",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 7.84,
+            "y": 14.41,
+            "width": 13.87,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-073c95ab",
+          "field_name": "survey_number",
+          "label": "Schedule A Survey Number",
+          "original_text": "Survey No. 84/1",
+          "normalized_value": "84/1",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 38.11,
+            "y": 25.58,
+            "width": 5.78,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-df23090a",
+          "field_name": "extent_allotted",
+          "label": "Schedule A Allotted Extent",
+          "original_text": "2 Acres 15 Guntas (2-15)",
+          "normalized_value": 2.375,
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 51.89,
+            "y": 25.58,
+            "width": 19.67,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.978,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    },
+    {
+      "id": "doc-d16ad549",
+      "filename": "Mutation_Extract_MR_2018_09.pdf",
+      "doc_type": "MUTATION_EXTRACT",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 22,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "a1f1dc88fd409b21de82ebf57eadfa2e7b4d316b03edf91690dcbf8fdcd3b3e5",
+      "language": "Kannada / English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-67a0b0b9",
+          "field_name": "mutation_number",
+          "label": "Mutation Number",
+          "original_text": "MUTATION NUMBER: MR/2018-19/09",
+          "normalized_value": "MR/2018-19/09",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 45.85,
+            "y": 7.89,
+            "width": 12.26,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-1b46e457",
+          "field_name": "mutation_date",
+          "label": "Mutation Certification Date",
+          "original_text": "04/11/2018",
+          "normalized_value": "04/11/2018",
+          "confidence": 0.97,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 59.79,
+            "y": 7.89,
+            "width": 9.72,
+            "height": 2.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-065d3ab5",
+          "field_name": "survey_number",
+          "label": "Survey Number",
+          "original_text": "Survey No: 84/1",
+          "normalized_value": "84/1",
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 43.02,
+            "y": 14.59,
+            "width": 5.78,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-0f3eb183",
+          "field_name": "mutation_type",
+          "label": "Mutation Reason / Type",
+          "original_text": "Partition Transfer (Partial Entry per 2011 Deed)",
+          "normalized_value": "Partition Transfer (Partial Entry per 2011 Deed)",
+          "confidence": 0.94,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 23.15,
+            "y": 17.74,
+            "width": 18.87,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-84e1db29",
+          "field_name": "transferred_extent",
+          "label": "Transferred Extent",
+          "original_text": "0-37.5 (37.5 Guntas)",
+          "normalized_value": 0.9375,
+          "confidence": 0.95,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 50.21,
+            "y": 30.33,
+            "width": 7.05,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-d6aa72b7",
+          "field_name": "balance_remarks",
+          "label": "Balance / Mutation Remarks",
+          "original_text": "0-37.5 (No Pauti Khata entered)",
+          "normalized_value": "0-37.5 (No Pauti Khata entered)",
+          "confidence": 0.93,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 72.05,
+            "y": 28.96,
+            "width": 16.33,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-73a7fc27",
+          "field_name": "is_inheritance_mutation",
+          "label": "Inheritance (Pauti Khata) Recorded?",
+          "original_text": "No Pauti Khata entered",
+          "normalized_value": false,
+          "confidence": 0.93,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 76.97,
+            "y": 28.96,
+            "width": 12.6,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.954,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    },
+    {
+      "id": "doc-6191bc42",
+      "filename": "Survey_Sketch_Tippani_84_1.pdf",
+      "doc_type": "SURVEY_SKETCH",
+      "mime_type": "application/pdf",
+      "pages_count": 1,
+      "file_size_kb": 2,
+      "upload_timestamp": "2026-11-20 13:54:39 UTC",
+      "file_hash": "4205fa382375cc85f6447c0852fcfcd8365726c1216962af03d5486f88614610",
+      "language": "English",
+      "extraction_method": "PyMuPDF Digital Layout",
+      "extracted_fields": [
+        {
+          "id": "fld-af96d13c",
+          "field_name": "survey_number",
+          "label": "Survey Number",
+          "original_text": "SURVEY NO. 84/1",
+          "normalized_value": "84/1",
+          "confidence": 0.99,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 63.18,
+            "y": 4.27,
+            "width": 22.74,
+            "height": 3.69
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-46394a93",
+          "field_name": "stated_extent",
+          "label": "Stated Field Extent",
+          "original_text": "1 Acre 35 Guntas (1-35)",
+          "normalized_value": 1.875,
+          "confidence": 0.98,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 57.68,
+            "y": 9.66,
+            "width": 14.67,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-9a5ff020",
+          "field_name": "sketch_date",
+          "label": "Sketch Date",
+          "original_text": "14/07/2012",
+          "normalized_value": "14/07/2012",
+          "confidence": 0.96,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 82.77,
+            "y": 11.02,
+            "width": 10.15,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        },
+        {
+          "id": "fld-eca73c1d",
+          "field_name": "boundaries",
+          "label": "Four Boundary Neighbors",
+          "original_text": "North: Survey No. 83 (Govt Halla); East: Survey No. 84/2 (Suresh R); South: Survey No. 85 (Orchard); West: Cart Road (Halla Buffer)",
+          "normalized_value": {
+            "North": "Survey No. 83 (Govt Halla)",
+            "East": "Survey No. 84/2 (Suresh R)",
+            "South": "Survey No. 85 (Orchard)",
+            "West": "Cart Road (Halla Buffer)"
+          },
+          "confidence": 0.94,
+          "method": "PyMuPDF Digital Layout",
+          "page": 1,
+          "bounding_box": {
+            "x": 6.53,
+            "y": 17.56,
+            "width": 6.49,
+            "height": 2.79
+          },
+          "reviewer_value": null,
+          "verification_status": "unverified",
+          "notes": null
+        }
+      ],
+      "ocr_quality_score": 0.968,
+      "status": "extracted",
+      "quality_warning": null,
+      "injection_warning": null
+    }
+  ],
+  "persons": [
+    {
+      "id": "BHOOMI-DEMO-001-PER-01",
+      "canonical_name": "Ramachandrappa",
+      "normalized_name": "ramachandrappa",
+      "aliases": [
+        "Ramachandrappa"
+      ],
+      "is_deceased": true,
+      "date_of_death": "14/03/2016",
+      "resolution_status": "confirmed",
+      "similarity_score": 1.0
+    },
+    {
+      "id": "BHOOMI-DEMO-001-PER-02",
+      "canonical_name": "Venkatesh R",
+      "normalized_name": "venkatesh r",
+      "aliases": [
+        "Venkatesh R"
+      ],
+      "is_deceased": false,
+      "date_of_death": null,
+      "resolution_status": "confirmed",
+      "similarity_score": 1.0
+    }
+  ],
+  "ownership_events": [
+    {
+      "id": "BHOOMI-DEMO-001-EVT-01",
+      "date": "12/08/2011",
+      "event_type": "partition",
+      "description": "Registered Partition Deed (RAM-1-01420-2011-12) for Survey No. 84/1: Schedule A allotted/conveyed to Venkatesh R (2-15 (2 acres 15 guntas)).",
+      "parties_involved": [
+        "Venkatesh R"
+      ],
+      "extent_affected": "2-15 (2 acres 15 guntas)",
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-a20f41ac",
+        "document_name": "Partition_Deed_2011_Registered.pdf",
+        "page": 1,
+        "original_text": "2 Acres 15 Guntas (2-15)",
+        "bounding_box": {
+          "x": 51.89,
+          "y": 25.58,
+          "width": 19.67,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-DEMO-001-EVT-02",
+      "date": "14/03/2016",
+      "event_type": "death",
+      "description": "Demise of Ramachandrappa at Government General Hospital, Bidadi, Ramanagara Dist. Official Death Certificate Reg No: DC/2016/0482.",
+      "parties_involved": [
+        "Ramachandrappa"
+      ],
+      "extent_affected": null,
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-30f4f927",
+        "document_name": "Death_Certificate_Ramachandrappa.pdf",
+        "page": 1,
+        "original_text": "RAMACHANDRAPPA | Date of Death: 14/03/2016 | Reg: DC/2016/0482",
+        "bounding_box": {
+          "x": 37.61,
+          "y": 24.69,
+          "width": 10.15,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-DEMO-001-EVT-03",
+      "date": "04/11/2018",
+      "event_type": "mutation",
+      "description": "Mutation Extract MR/2018-19/09 (Partition Transfer (Partial Entry per 2011 Deed)) certified. Transferred extent: 0-37-8 (0 acres 37 guntas 8 annas).",
+      "parties_involved": [],
+      "extent_affected": "0-37-8 (0 acres 37 guntas 8 annas)",
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-d16ad549",
+        "document_name": "Mutation_Extract_MR_2018_09.pdf",
+        "page": 1,
+        "original_text": "Partition Transfer (Partial Entry per 2011 Deed)",
+        "bounding_box": {
+          "x": 23.15,
+          "y": 17.74,
+          "width": 18.87,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-DEMO-001-EVT-04",
+      "date": "18/06/2019",
+      "event_type": "mortgage",
+      "description": "Encumbrance noted in RTC Column 11 for Survey No. 84/1: Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41). (Supporting deed requires verification).",
+      "parties_involved": [
+        "Ramachandrappa",
+        "Venkatesh R"
+      ],
+      "extent_affected": "Survey No. 84/1",
+      "status": "unresolved",
+      "evidence": {
+        "document_id": "doc-ccf7a89a",
+        "document_name": "RTC_Form16_2023.pdf",
+        "page": 1,
+        "original_text": "Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).",
+        "bounding_box": {
+          "x": 6.53,
+          "y": 41.55,
+          "width": 27.44,
+          "height": 2.79
+        }
+      }
+    },
+    {
+      "id": "BHOOMI-DEMO-001-EVT-05",
+      "date": "12/04/2023",
+      "event_type": "rtc_record",
+      "description": "RTC Form 16 for Survey No. 84/1 lists recorded owner(s): Ramachandrappa, Venkatesh R. Recorded extent: 1-35 (1 acres 35 guntas).",
+      "parties_involved": [
+        "Ramachandrappa",
+        "Venkatesh R"
+      ],
+      "extent_affected": "1-35 (1 acres 35 guntas)",
+      "status": "documented",
+      "evidence": {
+        "document_id": "doc-ccf7a89a",
+        "document_name": "RTC_Form16_2023.pdf",
+        "page": 1,
+        "original_text": "Sri Ramachandrappa, Sri Venkatesh R",
+        "bounding_box": {
+          "x": 11.57,
+          "y": 29.8,
+          "width": 17.28,
+          "height": 2.79
+        }
+      }
+    }
+  ],
+  "discrepancies": [
+    {
+      "id": "BHOOMI-DEMO-001-DISC-R1-01",
+      "rule_id": "R1",
+      "rule_name": "Deceased Owner in Current Record",
+      "severity": "Requires professional review",
+      "severity_rationale": "Rule R1 triggers 'Requires professional review' whenever a death certificate pre-dates an active RTC listing the deceased person as current holder.",
+      "explanation": "'Ramachandrappa' (date of death 14/03/2016) still appears as a recorded owner ('Ramachandrappa') in RTC_Form16_2023.pdf dated 12/04/2023 (name similarity 100%). This may indicate pending succession mutation or an unupdated revenue khata and requires verification.",
+      "suggested_next_step": "Verify legal heirship tree (Vamsha Vruksha) and submit Death Certificate at Nadakacheri / Bhoomi portal for Pauti Khata (inheritance mutation) verification.",
+      "fields_compared": {
+        "deceased_name": "Ramachandrappa",
+        "date_of_death": "14/03/2016",
+        "rtc_recorded_owner": "Ramachandrappa",
+        "rtc_record_date": "12/04/2023",
+        "name_similarity": 1.0
+      },
+      "evidence_refs": [
+        {
+          "document_id": "doc-30f4f927",
+          "document_name": "Death_Certificate_Ramachandrappa.pdf",
+          "page": 1,
+          "original_text": "RAMACHANDRAPPA",
+          "bounding_box": {
+            "x": 37.61,
+            "y": 21.9,
+            "width": 17.43,
+            "height": 2.79
+          }
+        },
+        {
+          "document_id": "doc-ccf7a89a",
+          "document_name": "RTC_Form16_2023.pdf",
+          "page": 1,
+          "original_text": "Sri Ramachandrappa, Sri Venkatesh R",
+          "bounding_box": {
+            "x": 11.57,
+            "y": 29.8,
+            "width": 17.28,
+            "height": 2.79
+          }
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "BHOOMI-DEMO-001-DISC-R2-02",
+      "rule_id": "R2",
+      "rule_name": "Extent Mismatch Between Documents",
+      "severity": "High",
+      "severity_rationale": "Rule R2 assigns 'High' when extent variance >= 0.25 ac (observed 0.5 ac > 0.01 ac tolerance) and 'Medium' for smaller variances.",
+      "explanation": "For Survey No. 84/1, stated extents differ across documents (RTC_Form16_2023.pdf: 1-35 (1 acres 35 guntas) (1.875 ac); Partition_Deed_2011_Registered.pdf: 2-15 (2 acres 15 guntas) (2.375 ac); Survey_Sketch_Tippani_84_1.pdf: 1-35 (1 acres 35 guntas) (1.875 ac)), a variance of 0.5 acres. Legitimate causes such as pot kharab deduction, phodi subdivision, or resurvey correction may account for part of this variance; this requires verification.",
+      "suggested_next_step": "Reconcile deed schedules against Akarband / Hissa Tippani and request an 11E / Tatkal Phodi measurement through a licensed surveyor.",
+      "fields_compared": {
+        "survey_number": "84/1",
+        "document_extents": {
+          "RTC_Form16_2023.pdf": 1.875,
+          "Partition_Deed_2011_Registered.pdf": 2.375,
+          "Survey_Sketch_Tippani_84_1.pdf": 1.875
+        },
+        "min_extent_acres": 1.875,
+        "max_extent_acres": 2.375,
+        "variance_acres": 0.5,
+        "tolerance_acres": 0.01
+      },
+      "evidence_refs": [
+        {
+          "document_id": "doc-ccf7a89a",
+          "document_name": "RTC_Form16_2023.pdf",
+          "page": 1,
+          "original_text": "1-35 (1 Acre 35 Guntas)",
+          "bounding_box": {
+            "x": 24.17,
+            "y": 20.89,
+            "width": 18.87,
+            "height": 2.79
+          }
+        },
+        {
+          "document_id": "doc-a20f41ac",
+          "document_name": "Partition_Deed_2011_Registered.pdf",
+          "page": 1,
+          "original_text": "2 Acres 15 Guntas (2-15)",
+          "bounding_box": {
+            "x": 51.89,
+            "y": 25.58,
+            "width": 19.67,
+            "height": 2.79
+          }
+        },
+        {
+          "document_id": "doc-6191bc42",
+          "document_name": "Survey_Sketch_Tippani_84_1.pdf",
+          "page": 1,
+          "original_text": "1 Acre 35 Guntas (1-35)",
+          "bounding_box": {
+            "x": 57.68,
+            "y": 9.66,
+            "width": 14.67,
+            "height": 2.79
+          }
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "BHOOMI-DEMO-001-DISC-R3-03",
+      "rule_id": "R3",
+      "rule_name": "Missing Inheritance Mutation (Pauti Khata)",
+      "severity": "Medium",
+      "severity_rationale": "Rule R3 assigns 'Medium' when death certificate evidence exists without a certified subsequent inheritance mutation extract.",
+      "explanation": "Death Certificate Death_Certificate_Ramachandrappa.pdf establishes demise on 14/03/2016, and no certified inheritance mutation (Pauti Khata) appears in the uploaded mutation extracts to reflect succession in revenue records. This requires verification before title transfer.",
+      "suggested_next_step": "Apply for Pauti Khata mutation at Nadakacheri / Taluk office with death certificate, family genealogy certificate, and survivor consent.",
+      "fields_compared": {
+        "deceased_person": "Ramachandrappa",
+        "date_of_death": "14/03/2016",
+        "certified_pauti_mutation_present": false
+      },
+      "evidence_refs": [
+        {
+          "document_id": "doc-30f4f927",
+          "document_name": "Death_Certificate_Ramachandrappa.pdf",
+          "page": 1,
+          "original_text": "RAMACHANDRAPPA",
+          "bounding_box": {
+            "x": 37.61,
+            "y": 21.9,
+            "width": 17.43,
+            "height": 2.79
+          }
+        },
+        {
+          "document_id": "doc-ccf7a89a",
+          "document_name": "RTC_Form16_2023.pdf",
+          "page": 1,
+          "original_text": "Sri Ramachandrappa, Sri Venkatesh R",
+          "bounding_box": {
+            "x": 11.57,
+            "y": 29.8,
+            "width": 17.28,
+            "height": 2.79
+          }
+        },
+        {
+          "document_id": "doc-d16ad549",
+          "document_name": "Mutation_Extract_MR_2018_09.pdf",
+          "page": 1,
+          "original_text": "No Pauti Khata entered",
+          "bounding_box": {
+            "x": 76.97,
+            "y": 28.96,
+            "width": 12.6,
+            "height": 2.79
+          }
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "BHOOMI-DEMO-001-DISC-R5-04",
+      "rule_id": "R5",
+      "rule_name": "Missing Expected Supporting Document",
+      "severity": "Medium",
+      "severity_rationale": "Rule R5 assigns 'Medium' when an active encumbrance or charge is cited in Column 11 without supporting mortgage deed or bank discharge/NOC documentation.",
+      "explanation": "RTC Column 11 in RTC_Form16_2023.pdf states: 'Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).', but no registered mortgage deed, loan closure letter, or bank NOC has been provided; encumbrance status requires verification.",
+      "suggested_next_step": "Obtain Form 15/16 Encumbrance Certificate (EC) from Kaveri Online and request a Bank NOC / Discharge Deed if the loan has been repaid.",
+      "fields_compared": {
+        "encumbrance_reference": "Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).",
+        "supporting_mortgage_docs_uploaded": 0
+      },
+      "evidence_refs": [
+        {
+          "document_id": "doc-ccf7a89a",
+          "document_name": "RTC_Form16_2023.pdf",
+          "page": 1,
+          "original_text": "Entry 1: Mortgage Charge to Canara Bank Bidadi Branch for Crop Loan Rs. 1,50,000/- dated 18/06/2019 (Ref: MR/2019-20/41).",
+          "bounding_box": {
+            "x": 6.53,
+            "y": 41.55,
+            "width": 27.44,
+            "height": 2.79
+          }
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": null,
+      "reviewed_by": null,
+      "reviewed_at": null
+    }
+  ],
+  "readiness_dimensions": [
+    {
+      "dimension_name": "Document Completeness",
+      "status": "Attention Required",
+      "checks_run": 5,
+      "issues_found": 1,
+      "evidence_count": 5,
+      "missing_items": [
+        "Supporting Mortgage Deed / Bank NOC"
+      ],
+      "review_status": "Pending Review",
+      "summary": "5 extracted document(s). Missing/unverified: Supporting Mortgage Deed / Bank NOC."
+    },
+    {
+      "dimension_name": "Ownership Consistency",
+      "status": "Requires Professional Review",
+      "checks_run": 4,
+      "issues_found": 1,
+      "evidence_count": 2,
+      "missing_items": [
+        "Pauti Khata / Legal Heir Certificate"
+      ],
+      "review_status": "Pending",
+      "summary": "'Ramachandrappa' (date of death 14/03/2016) still appears as a recorded owner ('Ramachandrappa') in RTC_Form16_2023.pdf dated 12/04/2023 (name similarity 100%). This may indicate pending succession mutation or an unupdated revenue khata and requires verification."
+    },
+    {
+      "dimension_name": "Mutation Consistency",
+      "status": "Attention Required",
+      "checks_run": 3,
+      "issues_found": 1,
+      "evidence_count": 1,
+      "missing_items": [
+        "Certified Pauti Khata Mutation Extract"
+      ],
+      "review_status": "Pending",
+      "summary": "Death Certificate Death_Certificate_Ramachandrappa.pdf establishes demise on 14/03/2016, and no certified inheritance mutation (Pauti Khata) appears in the uploaded mutation extracts to reflect succession in revenue records. This requires verification before title transfer."
+    },
+    {
+      "dimension_name": "Extent Consistency",
+      "status": "Requires Professional Review",
+      "checks_run": 4,
+      "issues_found": 1,
+      "evidence_count": 3,
+      "missing_items": [
+        "11E / Tatkal Phodi Measurement Sketch"
+      ],
+      "review_status": "Pending",
+      "summary": "For Survey No. 84/1, stated extents differ across documents (RTC_Form16_2023.pdf: 1-35 (1 acres 35 guntas) (1.875 ac); Partition_Deed_2011_Registered.pdf: 2-15 (2 acres 15 guntas) (2.375 ac); Survey_Sketch_Tippani_84_1.pdf: 1-35 (1 acres 35 guntas) (1.875 ac)), a variance of 0.5 acres. Legitimate causes such as pot kharab deduction, phodi subdivision, or resurvey correction may account for part of this variance; this requires verification."
+    },
+    {
+      "dimension_name": "Boundary Evidence",
+      "status": "Pass",
+      "checks_run": 4,
+      "issues_found": 0,
+      "evidence_count": 1,
+      "missing_items": [],
+      "review_status": "Documented",
+      "summary": "Tippani field survey sketch provides four adjoining survey boundaries (no invented geometry)."
+    },
+    {
+      "dimension_name": "Valuation Evidence",
+      "status": "Insufficient Evidence",
+      "checks_run": 1,
+      "issues_found": 0,
+      "evidence_count": 0,
+      "missing_items": [
+        "Minimum 3 verified comparables required (currently 0)"
+      ],
+      "review_status": "Abstained",
+      "summary": "Insufficient verified comparable evidence to produce a reliable valuation."
+    }
+  ],
+  "latest_workflow_run": {
+    "id": "RUN-366e78fa",
+    "status": "awaiting_human_review",
+    "started_at": "2026-11-20 13:54:39 UTC",
+    "completed_at": "2026-11-20 13:54:39 UTC",
+    "trace": [
+      {
+        "node": "LOAD_CASE",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "summary": "Loaded case BHOOMI-DEMO-001 with 5 document(s).",
+        "conditional_branch": null
+      },
+      {
+        "node": "VALIDATE_DOCS",
+        "status": "completed",
+        "duration_ms": 0.01,
+        "summary": "Validated 5 doc(s); 0 flagged for re-upload, 0 injection attempt(s) isolated.",
+        "conditional_branch": "all_valid"
+      },
+      {
+        "node": "EXTRACT_AND_VALIDATE",
+        "status": "completed",
+        "duration_ms": 0.02,
+        "summary": "Verified 31 extracted field(s) with source citations; 0 low-confidence field(s) queued for human review.",
+        "conditional_branch": "high_confidence_pass"
+      },
+      {
+        "node": "OWNERSHIP_LINEAGE",
+        "status": "completed",
+        "duration_ms": 0.75,
+        "summary": "Resolved 2 person entity(s) and 5 chronological ownership event(s).",
+        "conditional_branch": "lineage_built"
+      },
+      {
+        "node": "DISCREPANCY_ENGINE",
+        "status": "escalated",
+        "duration_ms": 0.48,
+        "summary": "Evaluated deterministic rules R1–R5: 4 discrepancy finding(s) raised.",
+        "conditional_branch": "conflicting_evidence_flag"
+      },
+      {
+        "node": "GIS_MODULE",
+        "status": "skipped",
+        "duration_ms": 0.0,
+        "summary": "No GeoJSON supplied — skipped GIS polygon QA (showing survey sketch only).",
+        "conditional_branch": "skip_gis_no_geometry"
+      },
+      {
+        "node": "VALUATION_MODULE",
+        "status": "skipped",
+        "duration_ms": 0.0,
+        "summary": "Insufficient verified comparables (<3) — abstained per SPEC Section 10.",
+        "conditional_branch": "abstain_insufficient_comparables"
+      },
+      {
+        "node": "UNSUPPORTED_CLAIM_VERIFIER",
+        "status": "completed",
+        "duration_ms": 0.29,
+        "summary": "100% of 4 finding(s) and 5 event(s) verified against document, page, and extracted field values.",
+        "conditional_branch": "all_claims_grounded"
+      },
+      {
+        "node": "HUMAN_REVIEW_CHECKPOINT",
+        "status": "escalated",
+        "duration_ms": 0.0,
+        "summary": "4 finding(s) awaiting reviewer sign-off.",
+        "conditional_branch": "awaiting_reviewer"
+      }
+    ]
+  },
+  "review_decisions": [],
+  "audit_logs": [
+    {
+      "id": "aud-df093c2646",
+      "actor_name": "BhoomiAI Pipeline",
+      "actor_role": "system",
+      "action": "PIPELINE_RUN",
+      "details": "Run RUN-366e78fa: 5 docs, 5 events, 4 discrepancies.",
+      "created_at": "2026-11-20 13:54:39 UTC"
+    },
+    {
+      "id": "aud-214e9f97ea",
+      "actor_name": "BhoomiAI Seed",
+      "actor_role": "system",
+      "action": "CASE_SEEDED",
+      "details": "Seeded synthetic golden case BHOOMI-DEMO-001 (5 PDFs).",
+      "created_at": "2026-11-20 13:54:39 UTC"
+    }
+  ],
+  "status": "ready_for_review"
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "BHOOMI-DEMO-001",
+  "abstained": true,
+  "message": "Insufficient verified comparable evidence to produce a reliable valuation.",
+  "verified_count": 0,
+  "total_count": 0,
+  "subject_extent_acres": 1.875,
+  "subject_extent_source": "RTC_Form16_2023.pdf (1-35 (1 Acre 35 Guntas))",
+  "min_price_per_acre_inr": null,
+  "median_price_per_acre_inr": null,
+  "max_price_per_acre_inr": null,
+  "estimated_range_inr": null,
+  "method": "Comparable-based arithmetic range (Abstained: < 3 verified comparables)",
+  "limitations": "Comparable-based arithmetic baseline only. NOT a registered valuer report, bank appraisal, or official Sub-Registrar guidance valuation.",
+  "comparables": []
+}

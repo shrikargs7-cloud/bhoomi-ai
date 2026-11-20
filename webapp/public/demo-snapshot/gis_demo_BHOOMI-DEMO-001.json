@@ -1,0 +1,211 @@
+{
+  "case_id": "BHOOMI-DEMO-001",
+  "has_geometry": true,
+  "source_description": "Synthetic Demo GeoJSON for Survey 84/1 (Demo Only — NOT Survey Record)",
+  "synthetic": true,
+  "message": "Supplied GeoJSON geometry validated. (Synthetic Demo GeoJSON — NOT official cadastral survey geometry.)",
+  "geojson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "survey_number": "84/1",
+          "label": "Sy 84/1 (Subject Parcel)",
+          "owner": "Ramachandrappa (Dec.) & Venkatesh R",
+          "recorded_extent": "1-35 (1.875 ac)",
+          "is_subject": true,
+          "synthetic": true
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.281,
+                12.7196
+              ],
+              [
+                77.28205,
+                12.7196
+              ],
+              [
+                77.28205,
+                12.71898
+              ],
+              [
+                77.281,
+                12.71898
+              ],
+              [
+                77.281,
+                12.7196
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "survey_number": "84/2",
+          "label": "Sy 84/2 (Schedule B - Suresh R)",
+          "owner": "Suresh R",
+          "recorded_extent": "2-10 (2.25 ac)",
+          "is_subject": false,
+          "synthetic": true
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.28205,
+                12.7196
+              ],
+              [
+                77.2832,
+                12.7196
+              ],
+              [
+                77.2832,
+                12.71898
+              ],
+              [
+                77.28205,
+                12.71898
+              ],
+              [
+                77.28205,
+                12.7196
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "survey_number": "83",
+          "label": "Sy 83 (Govt Halla / North)",
+          "owner": "Government Land",
+          "recorded_extent": "Buffer",
+          "is_subject": false,
+          "synthetic": true
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.281,
+                12.72005
+              ],
+              [
+                77.2832,
+                12.72005
+              ],
+              [
+                77.2832,
+                12.7196
+              ],
+              [
+                77.281,
+                12.7196
+              ],
+              [
+                77.281,
+                12.72005
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "survey_number": "85",
+          "label": "Sy 85 (Coconut Orchard / South)",
+          "owner": "Private Holding",
+          "recorded_extent": "3-00 (3.00 ac)",
+          "is_subject": false,
+          "synthetic": true
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                77.281,
+                12.71898
+              ],
+              [
+                77.2832,
+                12.71898
+              ],
+              [
+                77.2832,
+                12.7184
+              ],
+              [
+                77.281,
+                12.7184
+              ],
+              [
+                77.281,
+                12.71898
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "computed_area_acres": 1.9445,
+  "rtc_extent_acres": 1.875,
+  "area_variance_acres": 0.0695,
+  "qa_checks": [
+    {
+      "check_id": "QA-01",
+      "name": "GeoJSON Schema Structure",
+      "passed": true,
+      "severity": "Error",
+      "detail": "Found 4 GeoJSON feature(s) in FeatureCollection."
+    },
+    {
+      "check_id": "QA-02",
+      "name": "Polygon Ring Closure",
+      "passed": true,
+      "severity": "Error",
+      "detail": "First and final vertex match exactly (closed boundary ring)."
+    },
+    {
+      "check_id": "QA-03",
+      "name": "WGS84 CRS Bounds (-180..180, -90..90)",
+      "passed": true,
+      "severity": "Error",
+      "detail": "All boundary vertices fall within valid WGS84 geographic coordinates."
+    },
+    {
+      "check_id": "QA-04",
+      "name": "Non-Self-Intersecting Boundary Topology",
+      "passed": true,
+      "severity": "Warning",
+      "detail": "Clean simple polygon topology with zero crossing boundary segments."
+    },
+    {
+      "check_id": "QA-05",
+      "name": "Polygon Area vs RTC Stated Extent",
+      "passed": true,
+      "severity": "Info",
+      "detail": "Computed GeoJSON area: 1.9445 ac vs RTC extent: 1.875 ac (variance: 0.0695 ac)."
+    },
+    {
+      "check_id": "QA-06",
+      "name": "Survey Number Attribute Tagging",
+      "passed": true,
+      "severity": "Warning",
+      "detail": "All polygons carry a survey_number property."
+    }
+  ]
+}

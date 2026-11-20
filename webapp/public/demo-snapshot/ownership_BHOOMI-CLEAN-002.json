@@ -1,0 +1,157 @@
+{
+  "case_id": "BHOOMI-CLEAN-002",
+  "nodes": [
+    {
+      "id": "Parcel:112/3",
+      "node_type": "Parcel",
+      "label": "Survey No. 112/3",
+      "meta": {
+        "survey_number": "112/3"
+      }
+    },
+    {
+      "id": "Person:Savithramma",
+      "node_type": "Person",
+      "label": "Savithramma",
+      "meta": {
+        "is_deceased": false,
+        "date_of_death": null,
+        "resolution_status": "confirmed",
+        "similarity_score": 1.0
+      }
+    },
+    {
+      "id": "Doc:RTC_Mandya_112_3_2024.pdf",
+      "node_type": "Document",
+      "label": "RTC_Mandya_112_3_2024.pdf",
+      "meta": {
+        "doc_type": "RTC",
+        "doc_id": "doc-eb14b6a3"
+      }
+    },
+    {
+      "id": "Doc:Sale_Deed_Mandya_2019.pdf",
+      "node_type": "Document",
+      "label": "Sale_Deed_Mandya_2019.pdf",
+      "meta": {
+        "doc_type": "SALE_DEED",
+        "doc_id": "doc-d894c143"
+      }
+    },
+    {
+      "id": "Doc:Mutation_Mandya_MR_2020_14.pdf",
+      "node_type": "Document",
+      "label": "Mutation_Mandya_MR_2020_14.pdf",
+      "meta": {
+        "doc_type": "MUTATION_EXTRACT",
+        "doc_id": "doc-99dd8fae"
+      }
+    },
+    {
+      "id": "Event:BHOOMI-CLEAN-002-EVT-01",
+      "node_type": "Event",
+      "label": "SALE (15/05/2019)",
+      "meta": {
+        "date": "15/05/2019",
+        "event_type": "sale",
+        "status": "documented",
+        "description": "Registered Sale Deed (MAD-1-00894-2019-20) for Survey No. 112/3: Schedule A allotted/conveyed to Savithramma (2-0 (2 acres 0 guntas))."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-CLEAN-002-EVT-02",
+      "node_type": "Event",
+      "label": "MUTATION (18/06/2020)",
+      "meta": {
+        "date": "18/06/2020",
+        "event_type": "mutation",
+        "status": "documented",
+        "description": "Mutation Extract MR/2020-21/14 (Registered Sale Mutation (MR/2020-21/14)) certified. Transferred extent: 2-0 (2 acres 0 guntas)."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-CLEAN-002-EVT-03",
+      "node_type": "Event",
+      "label": "RTC_RECORD (10/02/2024)",
+      "meta": {
+        "date": "10/02/2024",
+        "event_type": "rtc_record",
+        "status": "documented",
+        "description": "RTC Form 16 for Survey No. 112/3 lists recorded owner(s): Savithramma. Recorded extent: 2-0 (2 acres 0 guntas)."
+      }
+    },
+    {
+      "id": "Event:BHOOMI-CLEAN-002-EVT-04",
+      "node_type": "Event",
+      "label": "MORTGAGE (Undated)",
+      "meta": {
+        "date": null,
+        "event_type": "mortgage",
+        "status": "unresolved",
+        "description": "Encumbrance noted in RTC Column 11 for Survey No. 112/3: Nil encumbrances or charges recorded. (Supporting deed requires verification)."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "Event:BHOOMI-CLEAN-002-EVT-01",
+      "target": "Parcel:112/3",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:Sale_Deed_Mandya_2019.pdf",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-01",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Savithramma",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-01",
+      "relation": "PARTICIPATES_IN"
+    },
+    {
+      "source": "Event:BHOOMI-CLEAN-002-EVT-02",
+      "target": "Parcel:112/3",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:Mutation_Mandya_MR_2020_14.pdf",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-02",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Event:BHOOMI-CLEAN-002-EVT-03",
+      "target": "Parcel:112/3",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:RTC_Mandya_112_3_2024.pdf",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-03",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Savithramma",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-03",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Person:Savithramma",
+      "target": "Parcel:112/3",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Event:BHOOMI-CLEAN-002-EVT-04",
+      "target": "Parcel:112/3",
+      "relation": "AFFECTS"
+    },
+    {
+      "source": "Doc:RTC_Mandya_112_3_2024.pdf",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-04",
+      "relation": "SUPPORTS"
+    },
+    {
+      "source": "Person:Savithramma",
+      "target": "Event:BHOOMI-CLEAN-002-EVT-04",
+      "relation": "PARTICIPATES_IN"
+    }
+  ]
+}

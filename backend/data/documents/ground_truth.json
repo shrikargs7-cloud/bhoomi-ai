@@ -1,0 +1,73 @@
+{
+  "case_id": "BHOOMI-DEMO-001",
+  "case_name": "Ramanagara Survey 84/1 Land Due Diligence",
+  "synthetic": true,
+  "documents": [
+    {
+      "filename": "RTC_Form16_2023.pdf",
+      "type": "RTC",
+      "language": "English",
+      "expected_fields": {
+        "survey_number": "84/1",
+        "total_extent": 1.875,
+        "record_date": "12/04/2023",
+        "recorded_owners": [
+          "Ramachandrappa",
+          "Venkatesh R"
+        ],
+        "khata_number": "342",
+        "column_11_encumbrance": "Canara Bank"
+      }
+    },
+    {
+      "filename": "Death_Certificate_Ramachandrappa.pdf",
+      "type": "DEATH_CERTIFICATE",
+      "language": "Kannada / English",
+      "expected_fields": {
+        "deceased_name": "Ramachandrappa",
+        "date_of_death": "14/03/2016",
+        "registration_number": "DC/2016/0482",
+        "place_of_death": "Bidadi"
+      }
+    },
+    {
+      "filename": "Partition_Deed_2011_Registered.pdf",
+      "type": "PARTITION_DEED",
+      "language": "English",
+      "expected_fields": {
+        "registration_number": "RAM-1-01420-2011-12",
+        "execution_date": "12/08/2011",
+        "survey_number": "84/1",
+        "extent_allotted": 2.375,
+        "allottee": "Venkatesh R"
+      }
+    },
+    {
+      "filename": "Mutation_Extract_MR_2018_09.pdf",
+      "type": "MUTATION_EXTRACT",
+      "language": "Kannada / English",
+      "expected_fields": {
+        "mutation_number": "MR/2018-19/09",
+        "mutation_date": "04/11/2018",
+        "survey_number": "84/1",
+        "transferred_extent": 0.9375
+      }
+    },
+    {
+      "filename": "Survey_Sketch_Tippani_84_1.pdf",
+      "type": "SURVEY_SKETCH",
+      "language": "English",
+      "expected_fields": {
+        "survey_number": "84/1",
+        "stated_extent": 1.875,
+        "sketch_date": "14/07/2012"
+      }
+    }
+  ],
+  "expected_findings": [
+    "R1",
+    "R2",
+    "R3",
+    "R5"
+  ]
+}

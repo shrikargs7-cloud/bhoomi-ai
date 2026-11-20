@@ -1,0 +1,59 @@
+{
+  "case_id": "BHOOMI-CLEAN-002",
+  "abstained": false,
+  "message": "Computed from 3 verified comparable(s) [Includes Synthetic Demo Comparables — NOT Real Market Values].",
+  "verified_count": 3,
+  "total_count": 3,
+  "subject_extent_acres": 2.0,
+  "subject_extent_source": "RTC_Mandya_112_3_2024.pdf (2-00 (2 Acres 0 Guntas))",
+  "min_price_per_acre_inr": 3200000.0,
+  "median_price_per_acre_inr": 3300000.0,
+  "max_price_per_acre_inr": 3400000.0,
+  "estimated_range_inr": [
+    6400000.0,
+    6800000.0
+  ],
+  "method": "Min / Median / Max ₹ per acre across user-verified comparables",
+  "limitations": "Comparable-based arithmetic baseline only. NOT a registered valuer report, bank appraisal, or official Sub-Registrar guidance valuation.",
+  "comparables": [
+    {
+      "id": "cmp-8526bd179f",
+      "label": "Sy 82/4 Sale (Synthetic Demo)",
+      "location": "Ramanagara Rural",
+      "sale_date": "14/02/2024",
+      "extent_str": "1-20",
+      "extent_acres": 1.5,
+      "sale_price_inr": 4800000.0,
+      "price_per_acre_inr": 3200000.0,
+      "source_ref": "Synthetic SRO Index Demo #101",
+      "verified": true,
+      "synthetic": true
+    },
+    {
+      "id": "cmp-44f6763e27",
+      "label": "Sy 86/1 Sale (Synthetic Demo)",
+      "location": "Bidadi Hobli",
+      "sale_date": "09/05/2024",
+      "extent_str": "2-00",
+      "extent_acres": 2.0,
+      "sale_price_inr": 6800000.0,
+      "price_per_acre_inr": 3400000.0,
+      "source_ref": "Synthetic SRO Index Demo #102",
+      "verified": true,
+      "synthetic": true
+    },
+    {
+      "id": "cmp-86b84912dc",
+      "label": "Sy 79/2 Sale (Synthetic Demo)",
+      "location": "Ramanagara Rural",
+      "sale_date": "21/08/2024",
+      "extent_str": "1-30",
+      "extent_acres": 1.75,
+      "sale_price_inr": 5775000.0,
+      "price_per_acre_inr": 3300000.0,
+      "source_ref": "Synthetic SRO Index Demo #103",
+      "verified": true,
+      "synthetic": true
+    }
+  ]
+}
