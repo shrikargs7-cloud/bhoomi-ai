@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BhoomiAI — Full 5-Min Demo Video (1080p + Kannada Voice)</title>
+  <style>
+    :root {
+      --bg: #051611;
+      --card: rgba(255, 255, 255, 0.05);
+      --border: rgba(52, 211, 153, 0.35);
+      --emerald: #34D399;
+      --amber: #FBBF24;
+      --text: #F8FAFC;
+      --muted: #CBD5E1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 18% 12%, #0F3B2E 0%, #051611 58%, #020A08 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 28px 20px 48px;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.16);
+      border: 1px solid var(--border);
+      color: var(--emerald);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .btn:hover { background: rgba(52, 211, 153, 0.16); transform: translateY(-1px); }
+    .btn.primary {
+      background: #10B981;
+      color: #041913;
+      border-color: #34D399;
+    }
+    .btn.primary:hover { background: #34D399; }
+    .btn.amber {
+      border-color: rgba(251, 191, 36, 0.45);
+      color: #FEF3C7;
+    }
+    h1 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 6px 0 8px;
+      font-weight: 800;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .player-shell {
+      background: #000;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
+    }
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .chapters {
+      margin-top: 22px;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+    .chapters h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--emerald);
+    }
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+    }
+    .chap-btn {
+      text-align: left;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .chap-btn:hover {
+      border-color: var(--emerald);
+      background: rgba(16, 185, 129, 0.12);
+    }
+    .chap-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--amber);
+      background: rgba(251, 191, 36, 0.12);
+      padding: 2px 7px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .chap-title { font-size: 13px; line-height: 1.35; color: #E2E8F0; }
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #94A3B8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <span>BhoomiAI</span>
+        <span class="pill">Problem 1.2 · 1080p Demo Video</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="./">Open Live Interactive App</a>
+        <a class="btn" href="https://github.com/shrikargs7-cloud/bhoomi-ai" target="_blank" rel="noopener">GitHub Repository</a>
+        <a class="btn amber" href="https://github.com/shrikargs7-cloud/bhoomi-ai/releases/download/v1.0-demo/BhoomiAI_Demo_Video.mp4" target="_blank" rel="noopener">Download 190 MB Master MP4</a>
+      </div>
+    </div>
+
+    <h1>BhoomiAI — Full System &amp; Field Workflow Walkthrough (5m 09s)</h1>
+    <p class="subtitle">Narrated walkthrough covering the stateful Form 21 remediation agent, live two-voice Kannada interaction (WhatsApp + JanAI Café), all 6 routes of the hosted web prototype, deterministic rule verification, honest live-vs-simulated scope, and the 90-day pilot plan.</p>
+
+    <div class="player-shell">
+      <video id="demo" controls playsinline preload="metadata" poster="./BhoomiAI_Demo_Thumb.png" src="./BhoomiAI_Demo_Video.mp4"></video>
+    </div>
+
+    <div class="chapters">
+      <h2>Jump to Chapter</h2>
+      <div class="chapter-grid">
+        <button class="chap-btn" onclick="jumpTo(0)"><span class="chap-time">0:00</span><span class="chap-title">01 · Intro &amp; Agent Goal (Problem 1.2)</span></button>
+        <button class="chap-btn" onclick="jumpTo(12.7)"><span class="chap-time">0:13</span><span class="chap-title">02 · Family Credit &amp; RTC Friction</span></button>
+        <button class="chap-btn" onclick="jumpTo(30.9)"><span class="chap-time">0:31</span><span class="chap-title">03 · Why Naive OCR &amp; LLMs Fail</span></button>
+        <button class="chap-btn" onclick="jumpTo(50.2)"><span class="chap-time">0:50</span><span class="chap-title">04 · Stateful Agent &amp; Approval Gate</span></button>
+        <button class="chap-btn" onclick="jumpTo(73.3)"><span class="chap-time">1:13</span><span class="chap-title">05 · Live Kannada Voice &amp; 2G Path</span></button>
+        <button class="chap-btn" onclick="jumpTo(109.3)"><span class="chap-time">1:50</span><span class="chap-title">06 · Live App: Dashboard &amp; Documents</span></button>
+        <button class="chap-btn" onclick="jumpTo(153.8)"><span class="chap-time">2:34</span><span class="chap-title">07 · Live App: Title Audit (R1–R5)</span></button>
+        <button class="chap-btn" onclick="jumpTo(182.5)"><span class="chap-time">3:03</span><span class="chap-title">08 · Live App: Ownership &amp; GIS</span></button>
+        <button class="chap-btn" onclick="jumpTo(205.6)"><span class="chap-time">3:26</span><span class="chap-title">09 · Live App: Valuation Guardrail</span></button>
+        <button class="chap-btn" onclick="jumpTo(225.1)"><span class="chap-time">3:45</span><span class="chap-title">10 · Honest Scope, DPDP &amp; 94.6% Eval</span></button>
+        <button class="chap-btn" onclick="jumpTo(261.7)"><span class="chap-time">4:22</span><span class="chap-title">11 · Economics, Paralegals &amp; 90 Days</span></button>
+        <button class="chap-btn" onclick="jumpTo(287.9)"><span class="chap-time">4:48</span><span class="chap-title">12 · Pilot Partnership Ask &amp; Links</span></button>
+      </div>
+      <p class="note">Decision support only — demo fixtures represent synthetic rural land cases for evaluation.</p>
+    </div>
+  </div>
+  <script>
+    function jumpTo(sec) {
+      var v = document.getElementById('demo');
+      v.currentTime = sec;
+      v.play().catch(function() {});
+    }
+  </script>
+</body>
+</html>

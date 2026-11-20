@@ -1,6 +1,7 @@
 # BhoomiAI — Land Readiness, Remedy & Collateral Intelligence Agent
 
 [![Live Hosted Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-1E8255?style=for-the-badge)](https://shrikargs7-cloud.github.io/bhoomi-ai/)
+[![Demo Video](https://img.shields.io/badge/Demo_Video-Watch_5m_1080p-D97706?style=for-the-badge)](https://shrikargs7-cloud.github.io/bhoomi-ai/demo-video.html)
 [![GitHub Repo](https://img.shields.io/badge/Source-GitHub-123D32?style=for-the-badge)](https://github.com/shrikargs7-cloud/bhoomi-ai)
 
 BhoomiAI is an evidence-first, goal-driven rural land intelligence prototype built for **Problem Statement 1.2**:
@@ -15,10 +16,24 @@ BhoomiAI is an evidence-first, goal-driven rural land intelligence prototype bui
 ## Live Links & Presentation Materials
 
 - **Live Hosted Interactive Prototype:** https://shrikargs7-cloud.github.io/bhoomi-ai/
+- **Full Narrated Demo Video (Watch Online — 5m 09s, 1080p + Kannada Voice):** https://shrikargs7-cloud.github.io/bhoomi-ai/demo-video.html
+- **In-Repo Video File (Web MP4):** [webapp/public/BhoomiAI_Demo_Video.mp4](webapp/public/BhoomiAI_Demo_Video.mp4) ([Direct Stream](https://shrikargs7-cloud.github.io/bhoomi-ai/BhoomiAI_Demo_Video.mp4))
+- **Full-Bitrate 1080p Master (190 MB Release Asset):** https://github.com/shrikargs7-cloud/bhoomi-ai/releases/download/v1.0-demo/BhoomiAI_Demo_Video.mp4
 - **GitHub Repository:** https://github.com/shrikargs7-cloud/bhoomi-ai
 - **Pitch Deck (10 Core Slides + 8 Q&A Appendix):** [slides/BhoomiAI_Pitch_Deck.pptx](slides/BhoomiAI_Pitch_Deck.pptx)
 
 *(The GitHub Pages deployment serves pre-computed FastAPI / PyMuPDF / ReportLab demo snapshots for `BHOOMI-DEMO-001` and `BHOOMI-CLEAN-002`, enabling interactive PDF page previews, bbox inspection, NetworkX ownership graph navigation, Leaflet GeoJSON QA, comparable valuation controls, and extent conversion directly in the browser.)*
+
+---
+
+## Demo Video Walkthrough
+
+[![Watch BhoomiAI 5-Min Demo Video](docs/demo_video_thumbnail.png)](https://shrikargs7-cloud.github.io/bhoomi-ai/demo-video.html)
+
+- **`0:00 – 1:13`** — Problem 1.2, rural credit friction, OCR/LLM failure modes, and the stateful human-gated remediation agent
+- **`1:13 – 1:50`** — Two-voice Kannada interaction (`kn-IN-GaganNeural` + `kn-IN-SapnaNeural`), JanAI Café path, and 2G SMS flow
+- **`1:50 – 3:45`** — Live 6-route web prototype walkthrough (`/` Readiness, `/documents`, `/title-report`, `/ownership`, `/gis`, `/valuation`)
+- **`3:45 – 5:09`** — Live-vs-simulated honesty audit, 90-day DPDP retention, `94.6%` synthetic benchmark (`50` parcels), `₹120/case` paralegal unit economics, and 90-day pilot ask
 
 ---
 
