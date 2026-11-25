@@ -18,6 +18,7 @@ import {
   Scale,
   UserCheck,
   ExternalLink,
+  Download,
 } from 'lucide-react';
 import { useBhoomi } from '../context/BhoomiContext';
 import {
@@ -25,6 +26,8 @@ import {
   translateDimension,
   translateStatus,
 } from '../i18n/strings';
+import { FarmerVoicePlayer } from '../components/FarmerVoicePlayer';
+import { Form21RemedyModal } from '../components/Form21RemedyModal';
 
 const DIMENSION_ROUTE: Record<string, string> = {
   'Document Completeness': '/documents',
@@ -106,6 +109,7 @@ export const DashboardPage: React.FC = () => {
   const [expandedDim, setExpandedDim] = useState<string | null>('Ownership Consistency');
   const [queueData, setQueueData] = useState<ReviewerQueuePayload | null>(null);
   const [queueTab, setQueueTab] = useState<'discs' | 'fields' | 'entities'>('discs');
+  const [showForm21Modal, setShowForm21Modal] = useState<boolean>(false);
 
   const fetchReviewerQueue = useCallback(async () => {
     try {
@@ -190,6 +194,15 @@ export const DashboardPage: React.FC = () => {
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-5 lg:px-6 space-y-5">
+      {/* Interactive Kannada Voice Assistant Bar for Farmers */}
+      <FarmerVoicePlayer />
+
+      {/* Form 21 Remedy Petition Modal */}
+      <Form21RemedyModal
+        isOpen={showForm21Modal}
+        onClose={() => setShowForm21Modal(false)}
+      />
+
       {/* Top Case Header + Balanced 4-Column KPI Strip */}
       <section className="rounded-2xl border border-[#164E49]/15 bg-white p-5 shadow-xs">
         <div className="flex flex-wrap items-start justify-between gap-4">
@@ -341,13 +354,22 @@ export const DashboardPage: React.FC = () => {
               </h2>
               <p className="text-xs text-slate-600 mt-0.5">{t('farmer_checklist_sub')}</p>
             </div>
-            <button
-              onClick={() => navigate('/title-report')}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-[#164E49]/25 bg-[#F7F5EB] px-3 py-1.5 text-xs font-bold text-[#123D32] hover:bg-[#ece7d4] cursor-pointer"
-            >
-              <Scale className="h-3.5 w-3.5 text-[#239B65]" />
-              <span>{t('farmer_legal_help')}</span>
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setShowForm21Modal(true)}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-[#239B65] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-[#1b8153] cursor-pointer shadow-xs"
+              >
+                <Download className="h-3.5 w-3.5" />
+                <span>{lang === 'kn' ? 'ಫಾರ್ಮ್ ೨೧ ಅರ್ಜಿ ಡೌನ್‌ಲೋಡ್' : 'Generate Form 21 Remedy'}</span>
+              </button>
+              <button
+                onClick={() => navigate('/title-report')}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-[#164E49]/25 bg-[#F7F5EB] px-3 py-1.5 text-xs font-bold text-[#123D32] hover:bg-[#ece7d4] cursor-pointer"
+              >
+                <Scale className="h-3.5 w-3.5 text-[#239B65]" />
+                <span>{t('farmer_legal_help')}</span>
+              </button>
+            </div>
           </div>
 
           {activeCase.discrepancies.length === 0 ? (
