@@ -1,385 +1,531 @@
 import React, { useState } from 'react';
-import { Users, AlertTriangle, CheckCircle2, ChevronRight, FileText, UserCheck, ShieldAlert, ArrowDown } from 'lucide-react';
+import {
+  Users,
+  AlertTriangle,
+  CheckCircle2,
+  FileText,
+  ShieldAlert,
+  ArrowRight,
+  Info,
+  Calendar,
+  Sparkles,
+} from 'lucide-react';
 import { useBhoomi } from '../../context/BhoomiContext';
 
-interface FamilyMember {
+interface FamilyNode {
   id: string;
   name: string;
   knName: string;
-  role: string;
-  generation: 'Gen 1 (Original Holder)' | 'Gen 2 (Partition / Deceased)' | 'Gen 3 (Current Heirs / Coparceners)';
-  status: 'deceased' | 'active_heir' | 'co_heir' | 'previous_owner';
-  dateOfDeath?: string;
-  shareExtent?: string;
-  notes: string;
-  isBlockingCredit?: boolean;
+  gender: 'M' | 'F';
+  generation: 1 | 2 | 3;
+  relationship: string;
+  status: 'deceased' | 'applicant' | 'coparcener' | 'co_sharer';
+  dod?: string;
+  surveyAllocated?: string;
+  extent?: string;
+  sharePct: string;
+  isBlocking: boolean;
+  legalBasis: string;
+  description: string;
+  evidenceDoc?: {
+    id: string;
+    name: string;
+    page: number;
+  };
 }
 
 export const FamilyTreeOwnershipView: React.FC = () => {
-  const { activeCase, lang, openEvidence } = useBhoomi();
-  const [selectedPerson, setSelectedPerson] = useState<string>('ramachandrappa');
+  const { lang, openEvidence } = useBhoomi();
+  const [selectedNodeId, setSelectedNodeId] = useState<string>('ramachandrappa');
 
-  // Ground-truth chain of title & family pedigree reconstructed from uploaded RTC, 2011 Partition Deed & Death Certificate
-  const familyMembers: FamilyMember[] = [
-    {
+  const nodes: Record<string, FamilyNode> = {
+    muniyappa: {
       id: 'muniyappa',
       name: 'Muniyappa (Late)',
-      knName: 'ಮುನಿಯಪ್ಪ',
-      role: 'Original Propositus / Ancestral Title Holder (Pre-1985)',
-      generation: 'Gen 1 (Original Holder)',
-      status: 'previous_owner',
-      dateOfDeath: '1998',
-      shareExtent: 'Original Ancestral Holding 5A 20G',
-      notes: 'Acquired via ancestral occupancy rights. Partitioned among sons in 2011 (Registered Partition Deed #2011/44).',
+      knName: 'ದಿವಂಗತ ಮುನಿಯಪ್ಪ',
+      gender: 'M',
+      generation: 1,
+      relationship: 'Propositus / Grandfather (Original Khatedar)',
+      status: 'deceased',
+      dod: '1998',
+      extent: 'Original Ancestral Holding: 5 Acres 20 Guntas',
+      sharePct: '100% (Original Ancestral Title)',
+      isBlocking: false,
+      legalBasis: 'Ancestral Inam / Occupancy Rights (Pre-1985)',
+      description:
+        'Original family head. Holding was legally partitioned among his 2 sons in 2011 via Registered Partition Deed (Book-I, Doc #2011/44).',
+      evidenceDoc: {
+        id: 'doc-a20f41ac',
+        name: 'Partition_Deed_2011_Registered.pdf',
+        page: 1,
+      },
     },
-    {
+    ramachandrappa: {
       id: 'ramachandrappa',
       name: 'Ramachandrappa (Late)',
       knName: 'ದಿವಂಗತ ರಾಮಚಂದ್ರಪ್ಪ',
-      role: 'Deceased Khatedar (Father of Applicant)',
-      generation: 'Gen 2 (Partition / Deceased)',
+      gender: 'M',
+      generation: 2,
+      relationship: 'Elder Son of Muniyappa (Father of Applicant)',
       status: 'deceased',
-      dateOfDeath: '14/03/2016',
-      shareExtent: '1 Acre 35 Guntas (Allocated in 2011 Partition)',
-      notes: 'Demised on 14/03/2016. Name STILL recorded on 2023 RTC Form 16 (Khata #342) without succession mutation (Pauti Khata).',
-      isBlockingCredit: true,
+      dod: '14/03/2016',
+      surveyAllocated: 'Survey No. 84/1',
+      extent: '1 Acre 35 Guntas (1.875 Acres)',
+      sharePct: '50% of Ancestral Holding',
+      isBlocking: true,
+      legalBasis: 'Allocated in 2011 Registered Partition Deed',
+      description:
+        'CRITICAL ISSUE: Deceased on 14/03/2016. Name is STILL recorded as active owner in Column 9 of 2023 RTC Form 16. Section 128 of KLR Act requires immediate Pauti Khata mutation.',
+      evidenceDoc: {
+        id: 'doc-30f4f927',
+        name: 'Death_Certificate_Ramachandrappa.pdf',
+        page: 1,
+      },
     },
-    {
+    govindappa: {
       id: 'govindappa',
       name: 'Govindappa',
       knName: 'ಗೋವಿಂದಪ್ಪ',
-      role: 'Brother / Co-sharer in 2011 Partition',
-      generation: 'Gen 2 (Partition / Deceased)',
-      status: 'previous_owner',
-      shareExtent: 'Allocated Survey 84/2 (Separate Khata)',
-      notes: 'Part of 2011 Partition Deed. Boundaries verified clean, no boundary dispute with Sy 84/1.',
+      gender: 'M',
+      generation: 2,
+      relationship: 'Younger Son of Muniyappa (Uncle)',
+      status: 'co_sharer',
+      surveyAllocated: 'Survey No. 84/2',
+      extent: '2 Acres 15 Guntas',
+      sharePct: '50% of Ancestral Holding',
+      isBlocking: false,
+      legalBasis: 'Allocated in 2011 Registered Partition Deed',
+      description:
+        'Younger brother of Ramachandrappa. Received separate Survey 84/2 under 2011 partition. Independent Khata already mutated cleanly in Bhoomi portal with no boundary clash.',
+      evidenceDoc: {
+        id: 'doc-a20f41ac',
+        name: 'Partition_Deed_2011_Registered.pdf',
+        page: 1,
+      },
     },
-    {
+    venkatesh: {
       id: 'venkatesh',
       name: 'Venkatesh R',
       knName: 'ವೆಂಕಟೇಶ್ ಆರ್',
-      role: 'Present Applicant & Surviving Legal Heir (Son)',
-      generation: 'Gen 3 (Current Heirs / Coparceners)',
-      status: 'active_heir',
-      shareExtent: 'Full beneficial possession of 1A 35G',
-      notes: 'Applying for Kisan Credit Card (KCC) loan. Cannot execute legal charge until Pauti Khata (Form 21) is sanctioned.',
-      isBlockingCredit: true,
+      gender: 'M',
+      generation: 3,
+      relationship: 'Son of Ramachandrappa (Present Applicant)',
+      status: 'applicant',
+      surveyAllocated: 'Survey No. 84/1',
+      extent: '1 Acre 35 Guntas',
+      sharePct: '1/3rd Coparcenary Share (Possession of 100%)',
+      isBlocking: true,
+      legalBasis: 'Hindu Succession Act Section 6 + KLR Act Section 128',
+      description:
+        'In beneficial possession of Survey 84/1 and applying for Kisan Credit Card loan. Cannot create mortgage charge until Form 21 mutation is completed.',
+      evidenceDoc: {
+        id: 'doc-ccf7a89a',
+        name: 'RTC_Form16_2023.pdf',
+        page: 1,
+      },
     },
-    {
+    radhamma: {
       id: 'radhamma',
       name: 'Radhamma',
       knName: 'ರಾಧಮ್ಮ',
-      role: 'Surviving Daughter / Coparcener (HSA 2005)',
-      generation: 'Gen 3 (Current Heirs / Coparceners)',
-      status: 'co_heir',
-      shareExtent: 'Equal coparcenary right under HSA Section 6',
-      notes: 'Consent affidavit required for Form 21 inheritance registration to prevent future partition litigation.',
+      gender: 'F',
+      generation: 3,
+      relationship: 'Elder Daughter of Ramachandrappa',
+      status: 'coparcener',
+      sharePct: '1/3rd Equal Coparcenary Right',
+      isBlocking: false,
+      legalBasis: 'Hindu Succession (Amendment) Act, 2005 (Section 6)',
+      description:
+        'Coparcener by birth with equal succession rights as a son under 2005 HSA amendment (Vineeta Sharma v. Rakesh Sharma). Must execute No-Objection Affidavit to prevent future title litigation.',
+      evidenceDoc: {
+        id: 'doc-30f4f927',
+        name: 'Death_Certificate_Ramachandrappa.pdf',
+        page: 1,
+      },
     },
-    {
+    manjula: {
       id: 'manjula',
       name: 'Manjula',
       knName: 'ಮಂಜುಳಾ',
-      role: 'Surviving Daughter / Coparcener (HSA 2005)',
-      generation: 'Gen 3 (Current Heirs / Coparceners)',
-      status: 'co_heir',
-      shareExtent: 'Equal coparcenary right under HSA Section 6',
-      notes: 'Consent affidavit required for Form 21 inheritance registration.',
+      gender: 'F',
+      generation: 3,
+      relationship: 'Younger Daughter of Ramachandrappa',
+      status: 'coparcener',
+      sharePct: '1/3rd Equal Coparcenary Right',
+      isBlocking: false,
+      legalBasis: 'Hindu Succession (Amendment) Act, 2005 (Section 6)',
+      description:
+        'Coparcener by birth. Consent required for single-name Khata mutation in favour of Venkatesh R or joint Khata entry.',
+      evidenceDoc: {
+        id: 'doc-30f4f927',
+        name: 'Death_Certificate_Ramachandrappa.pdf',
+        page: 1,
+      },
     },
-  ];
+  };
 
-  const currentPerson = familyMembers.find((m) => m.id === selectedPerson) || familyMembers[1];
+  const selected = nodes[selectedNodeId] || nodes.ramachandrappa;
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-6 lg:px-6 space-y-6">
-      {/* Overview Banner */}
+      {/* Top Banner with Pedigree Legend */}
       <div className="rounded-2xl border border-[#239B65]/30 bg-white p-5 shadow-xs">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
               <span className="rounded-md bg-[#123D32] px-2.5 py-0.5 font-mono text-[11px] font-bold text-white">
-                VAMSHA VRUKSHA (ವಂಶವೃಕ್ಷ)
+                GENEALOGICAL PEDIGREE ANALYSIS
               </span>
-              <span className="rounded-full bg-rose-100 border border-rose-200 px-2.5 py-0.5 text-[11px] font-bold text-rose-800">
-                1 Unmutated Succession Gap
+              <span className="rounded-full bg-rose-100 border border-rose-200 px-2.5 py-0.5 text-[11px] font-bold text-rose-800 flex items-center gap-1">
+                <AlertTriangle className="h-3 w-3" />
+                <span>1 Fatal Succession Gap: Unmutated Inheritance</span>
               </span>
             </div>
             <h2 className="mt-2 text-lg font-extrabold text-[#123D32]">
               {lang === 'kn'
-                ? 'ವಂಶಾವಳಿ ಮತ್ತು ಹಿಂದಿನ ಮಾಲೀಕರ ವಿವರ (Family Tree & Chain of Title)'
-                : '3-Generation Family Tree & Chain of Title Lineage'}
+                ? 'ವಂಶಾವಳಿ ವೃಕ್ಷ ಮತ್ತು ಪೀಳಿಗೆಯ ಹಕ್ಕುಗಳ ವಿಶ್ಲೇಷಣೆ'
+                : 'Vamsha Vruksha: Complete 3-Generation Family Pedigree Flowchart'}
             </h2>
-            <p className="text-xs text-slate-600 mt-1">
-              Reconstructed from registered Partition Deed (2011), Death Certificate (2016), and RTC Pahani (2023). Traces ancestral ownership, previous title holders, and surviving coparceners.
+            <p className="text-xs text-slate-600 mt-1 max-w-4xl">
+              Standard genealogical pedigree structure tracing ancestral propositus, 2011 branch partition, and individual child coparcenary entitlements under Section 6 of the Hindu Succession Act (2005). Click any node to inspect legal rights and citations.
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
-            <span className="rounded-xl bg-[#F7F5EB] border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700">
-              Total Recorded Lineage: <strong>3 Generations</strong>
+          {/* Standard Pedigree Legend */}
+          <div className="flex flex-wrap items-center gap-3 rounded-xl bg-[#F7F5EB] border border-slate-200 p-2.5 text-[11px] font-semibold text-slate-700">
+            <span className="flex items-center gap-1.5">
+              <span className="flex h-4 w-4 items-center justify-center rounded border border-slate-700 bg-white text-[9px] font-bold">
+                □
+              </span>
+              <span>Male (ಪುರುಷ)</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="flex h-4 w-4 items-center justify-center rounded-full border border-slate-700 bg-white text-[9px] font-bold">
+                ○
+              </span>
+              <span>Female (ಮಹಿಳೆ)</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-rose-600"></span>
+              <span className="text-rose-700 font-bold">Deceased / Blocked</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-[#239B65]"></span>
+              <span className="text-[#164E49] font-bold">Active Coparcener</span>
             </span>
           </div>
         </div>
       </div>
 
-      {/* Visual 3-Generation Pedigree Flow + Person Inspector */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left Side: Visual Family Tree Hierarchy */}
+        {/* Left Side: The Pure Pedigree Flowchart */}
         <div className="lg:col-span-8 space-y-4">
-          {/* Generation 1: Original Ancestral Holder */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                Generation 1 • Original Propositus / Ancestral Title (Pre-2011)
-              </span>
-              <span className="text-[11px] text-slate-400">Ancestral Khatedar</span>
-            </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs overflow-x-auto">
+            {/* GENERATION 1: PROPOSITUS */}
+            <div className="text-center">
+              <div className="inline-block rounded-full bg-slate-100 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">
+                Generation I • Original Propositus (ಪೂರ್ವಜರು)
+              </div>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => setSelectedNodeId('muniyappa')}
+                  className={`w-72 rounded-xl p-3 border text-left transition cursor-pointer relative shadow-xs ${
+                    selectedNodeId === 'muniyappa'
+                      ? 'border-[#239B65] bg-[#239B65]/10 ring-2 ring-[#239B65]/40'
+                      : 'border-slate-300 bg-slate-50/70 hover:bg-slate-100'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-5 w-5 items-center justify-center rounded border border-slate-700 bg-white font-mono text-xs font-bold text-slate-800">
+                      □
+                    </span>
+                    <span className="rounded bg-slate-200 px-1.5 py-0.2 text-[9px] font-bold text-slate-700">
+                      Late (Demised 1998)
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-sm font-extrabold text-[#123D32]">Muniyappa (ಮುನಿಯಪ್ಪ)</p>
+                  <p className="text-[11px] text-slate-500">Ancestral Khatedar • 5A 20G</p>
+                </button>
+              </div>
 
-            <div className="flex justify-center">
-              <button
-                onClick={() => setSelectedPerson('muniyappa')}
-                className={`w-full max-w-md rounded-xl p-3.5 text-left border transition cursor-pointer ${
-                  selectedPerson === 'muniyappa'
-                    ? 'border-[#239B65] bg-[#239B65]/5 ring-2 ring-[#239B65]/30 shadow-xs'
-                    : 'border-slate-200 hover:bg-slate-50'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-extrabold uppercase text-slate-500">Previous Owner</span>
-                  <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-bold">Demised 1998</span>
+              {/* Connecting Tree Stem */}
+              <div className="flex flex-col items-center">
+                <div className="h-6 w-0.5 bg-slate-400"></div>
+                {/* Horizontal branch line for Generation 2 */}
+                <div className="h-0.5 w-[56%] bg-slate-400 relative">
+                  <div className="absolute left-0 top-0 h-4 w-0.5 bg-slate-400"></div>
+                  <div className="absolute right-0 top-0 h-4 w-0.5 bg-slate-400"></div>
                 </div>
-                <p className="text-sm font-extrabold text-[#123D32] mt-1">Muniyappa (ಮುನಿಯಪ್ಪ)</p>
-                <p className="text-xs text-slate-600 mt-0.5">Partitioned holding among 2 sons in 2011</p>
-              </button>
+              </div>
             </div>
 
-            <div className="flex justify-center my-2 text-slate-300">
-              <ArrowDown className="h-5 w-5" />
-            </div>
-
-            {/* Generation 2: Sons & Deceased Khatedar */}
-            <div className="border-t border-slate-100 pt-3">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                  Generation 2 • Partitioned Sons (2011 Registered Partition Deed)
+            {/* GENERATION 2: SIBLING BRANCHES (PARTITION 2011) */}
+            <div className="mt-4">
+              <div className="text-center mb-2">
+                <span className="inline-block rounded-full bg-slate-100 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                  Generation II • 2011 Partition Sibling Branches (ಮಕ್ಕಳು)
                 </span>
-                <span className="text-[11px] text-rose-700 font-bold">Unmutated Link Here</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {/* Deceased Owner (Crucial block) */}
-                <button
-                  onClick={() => setSelectedPerson('ramachandrappa')}
-                  className={`rounded-xl p-3.5 text-left border transition cursor-pointer relative overflow-hidden ${
-                    selectedPerson === 'ramachandrappa'
-                      ? 'border-rose-500 bg-rose-50/40 ring-2 ring-rose-500/30 shadow-xs'
-                      : 'border-rose-200 bg-rose-50/20 hover:bg-rose-50/40'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-extrabold uppercase text-rose-700">Deceased Title Holder</span>
-                    <span className="text-[10px] bg-rose-600 text-white px-2 py-0.5 rounded-full font-bold">14/03/2016</span>
-                  </div>
-                  <p className="text-sm font-extrabold text-rose-950 mt-1 flex items-center gap-1.5">
-                    <span>Ramachandrappa (ರಾಮಚಂದ್ರಪ್ಪ)</span>
-                  </p>
-                  <p className="text-xs text-rose-800/90 mt-0.5 font-medium">
-                    Allocated Survey 84/1 (1A 35G) • Still on RTC Khata
-                  </p>
-                  <div className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-rose-700 bg-rose-100/80 px-2 py-0.5 rounded">
-                    <AlertTriangle className="h-3 w-3" />
-                    <span>Blocks Bank Loan until Pauti Khata</span>
-                  </div>
-                </button>
+              <div className="grid grid-cols-2 gap-6 pt-2">
+                {/* Branch A: Ramachandrappa (Focal branch with defect) */}
+                <div className="flex flex-col items-center">
+                  <button
+                    onClick={() => setSelectedNodeId('ramachandrappa')}
+                    className={`w-full max-w-[270px] rounded-xl p-3.5 border text-left transition cursor-pointer relative shadow-xs ${
+                      selectedNodeId === 'ramachandrappa'
+                        ? 'border-rose-500 bg-rose-50 ring-2 ring-rose-500/40'
+                        : 'border-rose-300 bg-rose-50/50 hover:bg-rose-50'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="flex h-5 w-5 items-center justify-center rounded border border-rose-800 bg-white font-mono text-xs font-bold text-rose-800">
+                        □
+                      </span>
+                      <span className="rounded bg-rose-600 px-2 py-0.2 text-[9px] font-bold text-white">
+                        Demised 14/03/2016
+                      </span>
+                    </div>
+                    <p className="mt-1.5 text-sm font-extrabold text-rose-950">
+                      Ramachandrappa (ರಾಮಚಂದ್ರಪ್ಪ)
+                    </p>
+                    <p className="text-[11px] font-semibold text-rose-800">
+                      Allocated Survey 84/1 (1A 35G)
+                    </p>
+                    <div className="mt-2 flex items-center gap-1 rounded bg-rose-200/70 px-2 py-0.5 text-[10px] font-extrabold text-rose-900">
+                      <AlertTriangle className="h-3 w-3 shrink-0" />
+                      <span>Unmutated Khatedar in RTC</span>
+                    </div>
+                  </button>
 
-                {/* Co-sharer brother */}
-                <button
-                  onClick={() => setSelectedPerson('govindappa')}
-                  className={`rounded-xl p-3.5 text-left border transition cursor-pointer ${
-                    selectedPerson === 'govindappa'
-                      ? 'border-[#239B65] bg-[#239B65]/5 ring-2 ring-[#239B65]/30 shadow-xs'
-                      : 'border-slate-200 hover:bg-slate-50'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-extrabold uppercase text-slate-500">Co-Sharer (Brother)</span>
-                    <span className="text-[10px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full font-bold">Sy 84/2 Cleared</span>
+                  {/* Stem connecting Ramachandrappa to his children */}
+                  <div className="h-7 w-0.5 bg-rose-400"></div>
+                  {/* Horizontal line for 3 children */}
+                  <div className="h-0.5 w-[92%] bg-rose-400 relative">
+                    <div className="absolute left-0 top-0 h-4 w-0.5 bg-rose-400"></div>
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 h-4 w-0.5 bg-rose-400"></div>
+                    <div className="absolute right-0 top-0 h-4 w-0.5 bg-rose-400"></div>
                   </div>
-                  <p className="text-sm font-extrabold text-[#123D32] mt-1">Govindappa (ಗೋವಿಂದಪ್ಪ)</p>
-                  <p className="text-xs text-slate-600 mt-0.5">Partitioned Survey 84/2 • Separate Khata Sanctioned</p>
-                  <div className="mt-2 text-[10px] text-slate-400">Adjoining North boundary verified</div>
-                </button>
+                </div>
+
+                {/* Branch B: Govindappa (Clean branch) */}
+                <div className="flex flex-col items-center">
+                  <button
+                    onClick={() => setSelectedNodeId('govindappa')}
+                    className={`w-full max-w-[270px] rounded-xl p-3.5 border text-left transition cursor-pointer relative shadow-xs ${
+                      selectedNodeId === 'govindappa'
+                        ? 'border-[#239B65] bg-[#239B65]/10 ring-2 ring-[#239B65]/40'
+                        : 'border-slate-200 bg-slate-50/60 hover:bg-slate-100'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="flex h-5 w-5 items-center justify-center rounded border border-slate-700 bg-white font-mono text-xs font-bold text-slate-800">
+                        □
+                      </span>
+                      <span className="rounded bg-emerald-100 px-2 py-0.2 text-[9px] font-bold text-emerald-800">
+                        Khata Cleared
+                      </span>
+                    </div>
+                    <p className="mt-1.5 text-sm font-extrabold text-[#123D32]">
+                      Govindappa (ಗೋವಿಂದಪ್ಪ)
+                    </p>
+                    <p className="text-[11px] text-slate-600">
+                      Allocated Survey 84/2 (2A 15G)
+                    </p>
+                    <div className="mt-2 text-[10px] font-medium text-slate-500">
+                      Clean mutation • Adjoining North border
+                    </div>
+                  </button>
+                  <div className="mt-4 p-3 rounded-xl border border-dashed border-slate-200 text-center text-[10px] text-slate-400 max-w-[240px]">
+                    Separate branch settled under MR #12/2012 (No pending dispute with Sy 84/1)
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="flex justify-center my-2 text-slate-300">
-              <ArrowDown className="h-5 w-5" />
-            </div>
-
-            {/* Generation 3: Surviving Legal Heirs */}
-            <div className="border-t border-slate-100 pt-3">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                  Generation 3 • Surviving Heirs &amp; Coparceners (Legal Succession)
+            {/* GENERATION 3: INDIVIDUAL CHILDREN & COPARCENERS */}
+            <div className="mt-6 border-t border-slate-100 pt-3">
+              <div className="text-center mb-3">
+                <span className="inline-block rounded-full bg-emerald-50 border border-emerald-200 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#164E49]">
+                  Generation III • All Children of Ramachandrappa (Coparceners under Hindu Succession Act)
                 </span>
-                <span className="text-[11px] text-[#239B65] font-bold">Eligible for Khata Update</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {/* Applicant */}
+              {/* 3 Children Cards Side by Side */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                {/* Child 1: Venkatesh R (Son / Applicant) */}
                 <button
-                  onClick={() => setSelectedPerson('venkatesh')}
-                  className={`rounded-xl p-3 text-left border transition cursor-pointer ${
-                    selectedPerson === 'venkatesh'
-                      ? 'border-[#239B65] bg-[#239B65]/10 ring-2 ring-[#239B65]/40 shadow-xs'
-                      : 'border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50'
+                  onClick={() => setSelectedNodeId('venkatesh')}
+                  className={`rounded-xl p-3 border text-left transition cursor-pointer relative shadow-xs ${
+                    selectedNodeId === 'venkatesh'
+                      ? 'border-[#239B65] bg-[#239B65]/15 ring-2 ring-[#239B65]/40'
+                      : 'border-emerald-300 bg-emerald-50/50 hover:bg-emerald-50'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase text-emerald-800">Applicant (Son)</span>
-                    <span className="h-2 w-2 rounded-full bg-emerald-600"></span>
+                    <span className="flex h-5 w-5 items-center justify-center rounded border border-[#164E49] bg-white font-mono text-xs font-bold text-[#164E49]">
+                      □
+                    </span>
+                    <span className="rounded bg-[#123D32] px-1.5 py-0.2 text-[9px] font-bold text-[#D6A84B]">
+                      Applicant (Son)
+                    </span>
                   </div>
-                  <p className="text-xs font-extrabold text-[#123D32] mt-1">Venkatesh R</p>
-                  <p className="text-[11px] text-slate-600 mt-0.5">In possession of Sy 84/1</p>
-                  <p className="text-[10px] text-[#164E49] font-bold mt-1.5">Applying for KCC Loan</p>
+                  <p className="mt-1 text-xs font-extrabold text-[#123D32]">
+                    1. Venkatesh R (ವೆಂಕಟೇಶ್)
+                  </p>
+                  <p className="text-[10.5px] text-slate-600 mt-0.5">Son • In possession of 1A 35G</p>
+                  <div className="mt-2 text-[10px] font-bold text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded">
+                    Applying for KCC Bank Loan
+                  </div>
                 </button>
 
-                {/* Daughter 1 */}
+                {/* Child 2: Radhamma (Daughter / Coparcener) */}
                 <button
-                  onClick={() => setSelectedPerson('radhamma')}
-                  className={`rounded-xl p-3 text-left border transition cursor-pointer ${
-                    selectedPerson === 'radhamma'
-                      ? 'border-[#239B65] bg-[#239B65]/10 ring-2 ring-[#239B65]/40 shadow-xs'
-                      : 'border-slate-200 hover:bg-slate-50'
+                  onClick={() => setSelectedNodeId('radhamma')}
+                  className={`rounded-xl p-3 border text-left transition cursor-pointer relative shadow-xs ${
+                    selectedNodeId === 'radhamma'
+                      ? 'border-[#239B65] bg-[#239B65]/15 ring-2 ring-[#239B65]/40'
+                      : 'border-slate-200 bg-slate-50/60 hover:bg-slate-100'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase text-slate-500">Daughter (Coparcener)</span>
-                    <span className="text-[9px] bg-slate-100 px-1.5 py-0.2 rounded font-bold">HSA S.6</span>
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full border border-purple-700 bg-white font-mono text-xs font-bold text-purple-800">
+                      ○
+                    </span>
+                    <span className="rounded bg-purple-50 border border-purple-200 px-1.5 py-0.2 text-[9px] font-bold text-purple-800">
+                      Daughter (ಮಗಳು)
+                    </span>
                   </div>
-                  <p className="text-xs font-extrabold text-[#123D32] mt-1">Radhamma</p>
-                  <p className="text-[11px] text-slate-600 mt-0.5">Equal coparcenary right</p>
-                  <p className="text-[10px] text-amber-700 font-bold mt-1.5">No-Objection Required</p>
+                  <p className="mt-1 text-xs font-extrabold text-slate-900">
+                    2. Radhamma (ರಾಧಮ್ಮ)
+                  </p>
+                  <p className="text-[10.5px] text-slate-600 mt-0.5">Daughter • HSA 2005 S.6</p>
+                  <div className="mt-2 text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                    Consent Affidavit Required
+                  </div>
                 </button>
 
-                {/* Daughter 2 */}
+                {/* Child 3: Manjula (Daughter / Coparcener) */}
                 <button
-                  onClick={() => setSelectedPerson('manjula')}
-                  className={`rounded-xl p-3 text-left border transition cursor-pointer ${
-                    selectedPerson === 'manjula'
-                      ? 'border-[#239B65] bg-[#239B65]/10 ring-2 ring-[#239B65]/40 shadow-xs'
-                      : 'border-slate-200 hover:bg-slate-50'
+                  onClick={() => setSelectedNodeId('manjula')}
+                  className={`rounded-xl p-3 border text-left transition cursor-pointer relative shadow-xs ${
+                    selectedNodeId === 'manjula'
+                      ? 'border-[#239B65] bg-[#239B65]/15 ring-2 ring-[#239B65]/40'
+                      : 'border-slate-200 bg-slate-50/60 hover:bg-slate-100'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase text-slate-500">Daughter (Coparcener)</span>
-                    <span className="text-[9px] bg-slate-100 px-1.5 py-0.2 rounded font-bold">HSA S.6</span>
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full border border-purple-700 bg-white font-mono text-xs font-bold text-purple-800">
+                      ○
+                    </span>
+                    <span className="rounded bg-purple-50 border border-purple-200 px-1.5 py-0.2 text-[9px] font-bold text-purple-800">
+                      Daughter (ಮಗಳು)
+                    </span>
                   </div>
-                  <p className="text-xs font-extrabold text-[#123D32] mt-1">Manjula</p>
-                  <p className="text-[11px] text-slate-600 mt-0.5">Equal coparcenary right</p>
-                  <p className="text-[10px] text-amber-700 font-bold mt-1.5">No-Objection Required</p>
+                  <p className="mt-1 text-xs font-extrabold text-slate-900">
+                    3. Manjula (ಮಂಜುಳಾ)
+                  </p>
+                  <p className="text-[10.5px] text-slate-600 mt-0.5">Daughter • HSA 2005 S.6</p>
+                  <div className="mt-2 text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                    Consent Affidavit Required
+                  </div>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Side: Selected Person Inspector & Legal Evidence */}
+        {/* Right Side: Deep Legal Rights & Evidence Inspector */}
         <div className="lg:col-span-4 space-y-4">
           <div className="rounded-2xl border border-[#164E49]/20 bg-white p-5 shadow-xs space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <div>
+            <div className="border-b border-slate-100 pb-3">
+              <div className="flex items-center justify-between">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
-                  {currentPerson.generation}
+                  Pedigree Node Inspector
                 </span>
-                <h3 className="text-base font-extrabold text-[#123D32]">
-                  {currentPerson.name}
-                </h3>
-                <p className="text-xs text-slate-500 font-sans">{currentPerson.knName}</p>
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold ${
+                    selected.status === 'deceased'
+                      ? 'bg-rose-100 text-rose-800'
+                      : selected.status === 'applicant'
+                      ? 'bg-emerald-100 text-emerald-800'
+                      : 'bg-slate-100 text-slate-700'
+                  }`}
+                >
+                  {selected.status.toUpperCase()}
+                </span>
               </div>
-              <span
-                className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold ${
-                  currentPerson.status === 'deceased'
-                    ? 'bg-rose-100 text-rose-800'
-                    : currentPerson.status === 'active_heir'
-                    ? 'bg-emerald-100 text-emerald-800'
-                    : 'bg-slate-100 text-slate-700'
-                }`}
-              >
-                {currentPerson.status.replace('_', ' ').toUpperCase()}
-              </span>
+              <h3 className="text-lg font-extrabold text-[#123D32] mt-1">
+                {selected.name}
+              </h3>
+              <p className="text-xs text-slate-500 font-sans">{selected.knName}</p>
             </div>
 
-            <div className="space-y-2 text-xs">
+            <div className="space-y-3 text-xs">
               <div>
-                <span className="text-slate-400 font-semibold text-[11px]">Role in Title Lineage:</span>
-                <p className="font-bold text-slate-800 mt-0.5">{currentPerson.role}</p>
+                <span className="text-slate-400 font-semibold text-[11px]">Kinship &amp; Position:</span>
+                <p className="font-bold text-slate-800 mt-0.5">{selected.relationship}</p>
               </div>
 
-              {currentPerson.dateOfDeath && (
-                <div>
-                  <span className="text-slate-400 font-semibold text-[11px]">Date of Death:</span>
-                  <p className="font-bold text-rose-700 mt-0.5">{currentPerson.dateOfDeath}</p>
-                </div>
-              )}
+              <div>
+                <span className="text-slate-400 font-semibold text-[11px]">Statutory Share Entitlement:</span>
+                <p className="font-bold text-[#164E49] mt-0.5">{selected.sharePct}</p>
+              </div>
 
-              {currentPerson.shareExtent && (
+              {selected.surveyAllocated && (
                 <div>
-                  <span className="text-slate-400 font-semibold text-[11px]">Share / Entitlement Extent:</span>
-                  <p className="font-bold text-slate-800 mt-0.5">{currentPerson.shareExtent}</p>
+                  <span className="text-slate-400 font-semibold text-[11px]">Survey Extent:</span>
+                  <p className="font-bold text-slate-800 mt-0.5">
+                    {selected.surveyAllocated} • {selected.extent}
+                  </p>
                 </div>
               )}
 
               <div>
-                <span className="text-slate-400 font-semibold text-[11px]">Reconstruction Notes:</span>
-                <p className="text-slate-600 mt-0.5 leading-relaxed bg-[#F7F5EB] p-2.5 rounded-lg border border-slate-200/80">
-                  {currentPerson.notes}
+                <span className="text-slate-400 font-semibold text-[11px]">Statutory Legal Grounding:</span>
+                <p className="font-semibold text-slate-700 mt-0.5 bg-[#F7F5EB] p-2 rounded-lg border border-slate-200">
+                  {selected.legalBasis}
+                </p>
+              </div>
+
+              <div>
+                <span className="text-slate-400 font-semibold text-[11px]">Analysis &amp; Bank Diligence:</span>
+                <p className="text-slate-600 mt-0.5 leading-relaxed">
+                  {selected.description}
                 </p>
               </div>
             </div>
 
-            {currentPerson.isBlockingCredit && (
-              <div className="rounded-xl border border-rose-200 bg-rose-50/70 p-3.5 text-xs text-rose-900 space-y-1.5">
+            {selected.isBlocking && (
+              <div className="rounded-xl border border-rose-200 bg-rose-50 p-3.5 text-xs text-rose-900 space-y-1">
                 <p className="font-extrabold flex items-center gap-1.5 text-rose-800">
                   <ShieldAlert className="h-4 w-4 shrink-0" />
-                  <span>Why This Matters to the Bank</span>
+                  <span>Loan Underwriting Warning</span>
                 </p>
-                <p className="leading-snug text-[11px]">
-                  Section 128 of Karnataka Land Revenue Act requires recording inheritance within 3 months. Banks cannot register a statutory mortgage charge against a deceased owner's RTC.
+                <p className="text-[11px] leading-snug">
+                  Bank cannot issue KCC sanction while title sits in a deceased person's name. A Form 21 inheritance petition supported by surviving coparcener affidavits must be submitted to Taluk office.
                 </p>
               </div>
             )}
 
-            <div className="border-t border-slate-100 pt-3">
-              <p className="text-[11px] font-bold text-slate-500 mb-2">Cross-Referenced Documents:</p>
-              <div className="space-y-1.5">
+            {selected.evidenceDoc && (
+              <div className="border-t border-slate-100 pt-3">
+                <p className="text-[11px] font-bold text-slate-500 mb-2">Source Document Citation:</p>
                 <button
                   onClick={() =>
                     openEvidence({
-                      documentId: 'doc-30f4f927',
-                      documentName: 'Death_Certificate_Ramachandrappa.pdf',
-                      page: 1,
+                      documentId: selected.evidenceDoc!.id,
+                      documentName: selected.evidenceDoc!.name,
+                      page: selected.evidenceDoc!.page,
                     })
                   }
-                  className="w-full flex items-center justify-between rounded-lg bg-[#F7F5EB] border border-slate-200 p-2 text-[11px] font-semibold text-[#123D32] hover:bg-[#239B65] hover:text-white transition cursor-pointer"
+                  className="w-full flex items-center justify-between rounded-lg bg-[#F7F5EB] border border-slate-200 p-2.5 text-xs font-bold text-[#123D32] hover:bg-[#239B65] hover:text-white transition cursor-pointer"
                 >
-                  <span className="truncate">Death_Certificate_Ramachandrappa.pdf</span>
-                  <FileText className="h-3 w-3 shrink-0 ml-1" />
-                </button>
-                <button
-                  onClick={() =>
-                    openEvidence({
-                      documentId: 'doc-a20f41ac',
-                      documentName: 'Partition_Deed_2011_Registered.pdf',
-                      page: 1,
-                    })
-                  }
-                  className="w-full flex items-center justify-between rounded-lg bg-[#F7F5EB] border border-slate-200 p-2 text-[11px] font-semibold text-[#123D32] hover:bg-[#239B65] hover:text-white transition cursor-pointer"
-                >
-                  <span className="truncate">Partition_Deed_2011_Registered.pdf</span>
-                  <FileText className="h-3 w-3 shrink-0 ml-1" />
+                  <span className="truncate">{selected.evidenceDoc.name}</span>
+                  <FileText className="h-4 w-4 shrink-0 ml-1.5" />
                 </button>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
