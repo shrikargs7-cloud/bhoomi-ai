@@ -9,17 +9,19 @@ import {
   FileText,
   CheckCircle2,
   X,
+  UserCheck,
 } from 'lucide-react';
 import { useBhoomi } from '../context/BhoomiContext';
 import { OwnershipGraphResponse } from '../types/bhoomi';
 import { OwnershipFlowGraph } from '../components/ownership/OwnershipFlowGraph';
+import { FamilyTreeOwnershipView } from '../components/ownership/FamilyTreeOwnershipView';
 
-type OwnershipTab = 'graph' | 'timeline' | 'entities' | 'inspector';
+type OwnershipTab = 'family_tree' | 'graph' | 'timeline' | 'entities' | 'inspector';
 
 export const OwnershipPage: React.FC = () => {
   const { activeCase, role, t, openEvidence, apiFetch, showToast, refreshCase } = useBhoomi();
 
-  const [activeTab, setActiveTab] = useState<OwnershipTab>('graph');
+  const [activeTab, setActiveTab] = useState<OwnershipTab>('family_tree');
   const [graphData, setGraphData] = useState<OwnershipGraphResponse | null>(null);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [eventTypeFilter, setEventTypeFilter] = useState<string>('all');
@@ -98,9 +100,10 @@ export const OwnershipPage: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-1.5 rounded-xl bg-[#F7F5EB] p-1 border border-slate-200">
             {[
-              { id: 'graph', label: 'Pedigree Graph', icon: GitBranch },
+              { id: 'family_tree', label: 'Vamsha Vruksha (Family Tree)', icon: Users },
+              { id: 'graph', label: 'Pedigree Graph (DAG)', icon: GitBranch },
               { id: 'timeline', label: 'Event Timeline', icon: Clock },
-              { id: 'entities', label: 'Entity Resolution', icon: Users },
+              { id: 'entities', label: 'Entity Resolution', icon: UserCheck },
               { id: 'inspector', label: 'Graph Inspector', icon: Network },
             ].map((tb) => {
               const Icon = tb.icon;
@@ -123,6 +126,9 @@ export const OwnershipPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* TAB 0: VAMSHA VRUKSHA FAMILY TREE & PREVIOUS OWNERS */}
+      {activeTab === 'family_tree' && <FamilyTreeOwnershipView />}
 
       {/* TAB 1: INTERACTIVE PEDIGREE & LINEAGE GRAPH */}
       {activeTab === 'graph' && (
